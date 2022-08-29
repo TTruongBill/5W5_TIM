@@ -1,0 +1,20 @@
+/**
+theme name: 5W5_TIM
+Author: Truong Tien Tien Bill
+Author URI: https://github.com/k1polo/5W5_TIM
+Description : 
+version : 1.0
+Requires PHP :7.4
+Licence: GNU General Public License v2 or later
+Text Domain : cidw-4w4
+*/
+
+/*----------------------------------- INITIALISATION -----------------*/
+@import "initialisation/normalize";
+/*----------------------------------- LAYOUT -----------------*/
+/*----------------------------------- VARIABLES -----------------*/
+
+/*----------------------------------- COMPOSANTES -----------------*/
+@import "composants/front-page";
+@import "composants/header";
+@import "composants/footer";
