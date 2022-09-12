@@ -16,6 +16,7 @@
                 <?php echo get_bloginfo('name'); ?>
             </a>
         </h1>
+        <?php wp_nav_menu(); ?>
     </section>
 
 </header>
