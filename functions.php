@@ -19,6 +19,7 @@ Function cidw_5w5_enregistre_mon_menu() {
     register_nav_menus(
         array(
             'navPages' => esc_html__('Navigation des pages', 'cidw_5w5'),
+            'ListeCours' => esc_html__('Liste des cours', 'cidw_5w5'),
         )
     );
 }
