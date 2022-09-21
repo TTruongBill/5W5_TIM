@@ -1,9 +1,8 @@
-@charset "UTF-8";
 /**
-theme name: 2022-4w4 EF -Truong Tien Tien Bill
+theme name: 5W5_TIM
 Author: Truong Tien Tien Bill
-Author URI: https://github.com/k1polo/2022-4w4
-Description : Épreuve finale dans le cadre du cours 4W4
+Author URI: https://github.com/k1polo/5W5_TIM
+Description : 
 version : 1.0
 Requires PHP :7.4
 Licence: GNU General Public License v2 or later
@@ -321,6 +320,11 @@ template {
 }
 
 /*----------------------------------- LAYOUT -----------------*/
+/*----------------------------------- VARIABLES -----------------*/
+/* ---------------- BACKGROUND */
+/* ---------------- LIENS */
+/* ---------------- Taille H */
+/* ---------------- Taille P*/
 /*----------------------------------- COMPOSANTES -----------------*/
 .site_main_front_page {
   background-color: rgb(255, 208, 208);
