@@ -18,9 +18,9 @@
         </h1>
         <?php wp_nav_menu(array('menu'=>"navPages",
                                 "container"=>"nav")); ?>
-        <?php wp_nav_menu(array('menu'=>"Cours",
-                                "container"=>"nav")); ?>
-                                
+        <?php /*wp_nav_menu(array('menu'=>"ListeCours",
+                                "container"=>"nav")); */?>
+                              
     </section>
 
 </header>

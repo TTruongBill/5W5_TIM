@@ -1,3 +1,24 @@
 .site_header{
     background-color: rgb(198, 198, 255);
+    display: flex;
+    justify-content: center;
 }
+
+.site_header title{
+    background-color: rgb(198, 198, 255);
+    display: flex;
+    justify-content: center;
+}
+
+.site_header h1{
+    margin: 0px;
+    text-align: center;
+}
+
+.site_header nav ul {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-around;
+}
+

@@ -326,14 +326,55 @@ template {
 /* ---------------- Taille H */
 /* ---------------- Taille P*/
 /*----------------------------------- COMPOSANTES -----------------*/
+.error404 > header {
+  display: none;
+}
+
 .site_main_front_page {
   background-color: rgb(255, 208, 208);
+  font-family: "Futura";
+  height: 70vh;
+}
+
+.site_main_front_page h1 {
+  margin: 0;
 }
 
 .site_header {
   background-color: rgb(198, 198, 255);
+  display: flex;
+  justify-content: center;
+}
+
+.site_header title {
+  background-color: rgb(198, 198, 255);
+  display: flex;
+  justify-content: center;
+}
+
+.site_header h1 {
+  margin: 0px;
+  text-align: center;
+}
+
+.site_header nav ul {
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .site_footer {
   background-color: rgb(161, 200, 248);
+  position: absolute;
+  width: 100%;
+}
+
+#menu-navpages {
+  margin: 0;
+  padding: 10px;
+}
+
+#menu-navpages li {
+  list-style: none;
 }/*# sourceMappingURL=style.css.map */
