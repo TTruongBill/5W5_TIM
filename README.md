@@ -8,6 +8,8 @@ Rajout de composants : header et footer.
 #
 CSS : Rajout de normalize, début d'un nav, début de la page d'accueil, début de variables.
 #
-google-sheet(product backlog):https://docs.google.com/spreadsheets/d/1S9ZxRREMPuLLbzwBsvkTdu9Du900yJM3RaKV92jllL8/edit#gid=1447645501
+lien google-sheet(product backlog):https://docs.google.com/spreadsheets/d/1S9ZxRREMPuLLbzwBsvkTdu9Du900yJM3RaKV92jllL8/edit#gid=1447645501
 #
 lien siteGround(non-utilisable pour le moment) : https://eddym31.sg-host.com/
+#
+Lien github projects : https://github.com/users/k1polo/projects/3
