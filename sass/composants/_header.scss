@@ -1,11 +1,11 @@
 .site_header{
-    background-color: rgb(198, 198, 255);
+    background-color: rgb(37, 37, 37);
     display: flex;
     justify-content: center;
 }
 
 .site_header title{
-    background-color: rgb(198, 198, 255);
+    background-color: rgb(37, 37, 37);
     display: flex;
     justify-content: center;
 }
@@ -20,5 +20,6 @@
     width: 100vw;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 

@@ -319,21 +319,81 @@ template {
   display: none;
 }
 
-/*----------------------------------- LAYOUT -----------------*/
 /*----------------------------------- VARIABLES -----------------*/
 /* ---------------- BACKGROUND */
 /* ---------------- LIENS */
+/*----------------- TYPO */
 /* ---------------- Taille H */
 /* ---------------- Taille P*/
+/*----------------------------------- BASE----------------------*/
+a {
+  color: rgb(178, 219, 238);
+}
+a:visited {
+  color: rgb(3, 102, 188);
+}
+a:hover, a:focus, a:active {
+  color: rgb(186, 175, 255);
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+body {
+  background: rgb(160, 160, 160);
+  height: 100vh;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  margin: 1em 0;
+}
+
+/*TYPOGRAPHY*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: rgb(144, 225, 255);
+  font-family: "yes";
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+/*----------------------------------- LAYOUT -----------------*/
 /*----------------------------------- COMPOSANTES -----------------*/
 .error404 > header {
   display: none;
 }
 
 .site_main_front_page {
-  background-color: rgb(255, 208, 208);
+  background-color: rgb(67, 67, 67);
+  color: white;
   font-family: "Futura";
-  height: 70vh;
 }
 
 .site_main_front_page h1 {
@@ -341,13 +401,13 @@ template {
 }
 
 .site_header {
-  background-color: rgb(198, 198, 255);
+  background-color: rgb(37, 37, 37);
   display: flex;
   justify-content: center;
 }
 
 .site_header title {
-  background-color: rgb(198, 198, 255);
+  background-color: rgb(37, 37, 37);
   display: flex;
   justify-content: center;
 }
@@ -362,19 +422,59 @@ template {
   width: 100vw;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 
 .site_footer {
-  background-color: rgb(161, 200, 248);
+  background-color: rgb(19, 19, 19);
   position: absolute;
+  bottom: 0;
   width: 100%;
+  color: white;
 }
 
 #menu-navpages {
+  padding: 0;
   margin: 0;
-  padding: 10px;
+}
+
+#menu-navpages ul {
+  height: 100%;
 }
 
 #menu-navpages li {
   list-style: none;
+  height: 100%;
+}
+#menu-navpages li a {
+  text-decoration: none;
+}
+
+.Titre {
+  font-size: 40px;
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image img {
+  display: none;
+}
+
+.boite_carrousel_img img {
+  opacity: 0;
+  transition: all 0.5s;
+  width: 100%;
+  position: absolute;
+}
+.boite_carrousel_img img.img-ouvrir {
+  opacity: 1;
+}
+
+.boite_carrousel_nav {
+  position: absolute;
+  right: 50%;
+  margin: 26em 0 0 0;
+}
+
+.gallerie1 {
+  margin: 0;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
