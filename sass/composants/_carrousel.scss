@@ -1,0 +1,24 @@
+.wp-block-gallery.has-nested-images figure.wp-block-image img{
+    display: none;
+
+}
+.boite_carrousel_img img{
+    opacity: 0;
+    transition: all 0.5s;
+    width: 100%;
+    position: absolute;
+
+    &.img-ouvrir{
+        opacity: 1;
+    }
+}
+.boite_carrousel_nav{
+    position: absolute;
+    right: 50%;
+    margin: 26em 0 0 0;
+}
+
+.gallerie1{
+    margin: 0;
+    height: 100%;
+}

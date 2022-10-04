@@ -9,9 +9,43 @@ function cidw_5W5_enqueue(){
     wp_enqueue_style('cidw_5w5_police_google',
     "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap",
     false);
+
+    wp_enqueue_style('Font');
+
+    // Combinaison 1 (Open Sans + Cooper Hewitt + PT Sans)
     wp_enqueue_style('cidw_5w5_police_google',
-    "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap",
+    "https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap",
     false);
+    wp_register_style('Font', 'http://fonts.cdnfonts.com/css/cooper-hewitt?styles=34277');
+    wp_enqueue_style('cidw_5w5_police_google',
+    "https://fonts.googleapis.com/css2?family=PT+Sans&display=swap",
+    false);
+
+    // Combinaison 2 (Julius Sans One + Archivo Narrow + Source Sans Pro)
+    wp_enqueue_style('cidw_5w5_police_google',
+    "https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap",
+    false);
+    wp_enqueue_style('cidw_5w5_police_google',
+    "https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&display=swap",
+    false);
+    wp_enqueue_style('cidw_5w5_police_google',
+    "https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap",
+    false);
+
+    // Combinaison 3 (Bodoni "Bold" + Bodoni "Regular Italic" + Monserrat)
+    wp_enqueue_style('cidw_5w5_police_google',
+    "https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,800&display=swap",
+    false);
+    wp_enqueue_style('cidw_5w5_police_google',
+    "https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&display=swap",
+    false);
+    wp_enqueue_style('cidw_5w5_police_google',
+    "https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap",
+    false);
+
+    // Combinaison 4 (Futura + proxima-nova)
+    wp_register_style('Font', 'https://use.typekit.net/ted7ipj.css');
+    wp_register_style('Font', 'https://use.typekit.net/ted7ipj.css');
 }
 
 add_action("wp_enqueue_scripts", "cidw_5W5_enqueue");

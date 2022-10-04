@@ -11,12 +11,25 @@ Text Domain : cidw-4w4
 
 /*----------------------------------- INITIALISATION -----------------*/
 @import "initialisation/normalize";
-/*----------------------------------- LAYOUT -----------------*/
 /*----------------------------------- VARIABLES -----------------*/
 @import "variables/couleurs";
 @import "variables/typo";
 
+/*----------------------------------- BASE----------------------*/
+@import "base/elements/links";
+@import "base/elements/body";
+@import "base/elements/media";
+
+/*TYPOGRAPHY*/
+@import "base/typography/typography";
+
+/*----------------------------------- LAYOUT -----------------*/
+
 /*----------------------------------- COMPOSANTES -----------------*/
+@import "composants/404";
 @import "composants/front-page";
 @import "composants/header";
 @import "composants/footer";
+@import "composants/nav";
+@import "composants/carrousel";
+
