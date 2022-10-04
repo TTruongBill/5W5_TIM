@@ -10,17 +10,11 @@
 <body <?php body_class("site"); ?>>
 <header class="site_header">
     <section class="site_header_title">
-        <?php the_custom_logo(); ?>
-        <h1>
-            <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                <?php echo get_bloginfo('name'); ?>
-            </a>
-        </h1>
         <?php wp_nav_menu(array('menu'=>"navPages",
                                 "container"=>"nav")); ?>
-        <?php wp_nav_menu(array('menu'=>"Cours",
-                                "container"=>"nav")); ?>
-                                
+        <?php /*wp_nav_menu(array('menu'=>"ListeCours",
+                                "container"=>"nav")); */?>
+                              
     </section>
 
 </header>
