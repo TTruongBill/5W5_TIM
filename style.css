@@ -327,10 +327,10 @@ template {
 /* ---------------- Taille P*/
 /*----------------------------------- BASE----------------------*/
 a {
-  color: rgb(178, 219, 238);
+  color: rgb(255, 255, 255);
 }
 a:visited {
-  color: rgb(3, 102, 188);
+  color: rgb(255, 255, 255);
 }
 a:hover, a:focus, a:active {
   color: rgb(186, 175, 255);
@@ -343,7 +343,7 @@ a:hover, a:active {
 }
 
 body {
-  background: rgb(160, 160, 160);
+  background-color: rgb(17, 17, 17);
   height: 100vh;
 }
 
@@ -391,7 +391,7 @@ h6 {
 }
 
 .site_main_front_page {
-  background-color: rgb(67, 67, 67);
+  background-color: rgb(17, 17, 17);
   color: white;
   font-family: "Futura";
 }
@@ -401,15 +401,13 @@ h6 {
 }
 
 .site_header {
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(60, 60, 60);
   display: flex;
   justify-content: center;
 }
 
 .site_header title {
-  background-color: rgb(37, 37, 37);
-  display: flex;
-  justify-content: center;
+  background-color: rgb(60, 60, 60);
 }
 
 .site_header h1 {
@@ -419,41 +417,93 @@ h6 {
 
 .site_header nav ul {
   display: flex;
-  width: 100vw;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .site_footer {
-  background-color: rgb(19, 19, 19);
+  background-color: rgb(0, 0, 0);
   position: absolute;
   bottom: 0;
   width: 100%;
   color: white;
 }
 
-#menu-navpages {
+/*************MOBILE*************/
+.navDesktop {
+  display: none;
+}
+
+#menu-navpages, #menu-navpages-1 {
   padding: 0;
   margin: 0;
 }
 
-#menu-navpages ul {
+.navMobile {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
+}
+
+.navMobile section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(26, 26, 26);
+  padding: 5px 10px;
+}
+.navMobile section label {
+  display: flex;
+}
+
+.menuBurger {
+  filter: invert(100%) brightness(100%) contrast(100%);
+  cursor: pointer;
+}
+
+#menu-navpages-1 {
+  background-color: rgb(26, 26, 26);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  z-index: 1;
+  border-top: 1px solid rgb(53, 53, 53);
+  border-bottom: 1px solid rgb(53, 53, 53);
+  box-shadow: 0px 10px 10px rgb(0, 0, 0);
+}
+
+#menu-navpages ul, #menu-navpages-1 ul {
   height: 100%;
 }
 
-#menu-navpages li {
+#menu-navpages li, #menu-navpages-1 li {
   list-style: none;
   height: 100%;
+  padding: 15px 10px 15px 0;
 }
-#menu-navpages li a {
+#menu-navpages li a, #menu-navpages-1 li a {
   text-decoration: none;
 }
 
-.Titre {
-  font-size: 40px;
+/*************DESKTOP*************/
+@media only screen and (min-width: 600px) {
+  .navDesktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .navMobile {
+    display: none;
+  }
+  .Titre {
+    font-size: 40px;
+  }
 }
-
 .wp-block-gallery.has-nested-images figure.wp-block-image img {
   display: none;
 }
@@ -477,4 +527,48 @@ h6 {
 .gallerie1 {
   margin: 0;
   height: 100%;
+}
+
+/*----------------------------------- ANIMATIONS ------------------------*/
+#menuNavMobile {
+  display: none;
+}
+
+.menu-navpages-container {
+  transform: translateY(-160%);
+  transition: all 0.5s;
+}
+
+#menuNavMobile:checked ~ .menu-navpages-container {
+  transform: translateY(0%);
+}
+
+.menuBurger {
+  transition: opacity 0.5s;
+  transition: background-color 0.3s;
+}
+
+.ligne1X {
+  transform: rotateZ(45deg) translate(14px, -13px);
+}
+
+.ligne2X {
+  opacity: 0;
+}
+
+.ligne3X {
+  transform: rotateZ(-45deg) translate(-43px, -5px);
+}
+
+.circleBackground {
+  background-color: rgb(193, 193, 193);
+  border-radius: 100%;
+}
+
+.circleBackground:hover {
+  background-color: rgb(144, 144, 144);
+}
+
+#line1, #line2, #line3 {
+  transition: all 0.5s;
 }/*# sourceMappingURL=style.css.map */
