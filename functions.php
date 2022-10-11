@@ -46,6 +46,29 @@ function cidw_5W5_enqueue(){
     // Combinaison 4 (Futura + proxima-nova)
     wp_register_style('Font', 'https://use.typekit.net/ted7ipj.css');
     wp_register_style('Font', 'https://use.typekit.net/ted7ipj.css');
+
+    //Javascript carrousel
+    wp_register_script('Carrousel',
+    get_template_directory_uri() . '/javascript/caroussel.js',
+    array(),
+    filemtime(get_template_directory() . '/javascript/caroussel.js'),
+    true);
+
+     //Javascript menuBurger
+     wp_register_script('Burger',
+     get_template_directory_uri() . '/javascript/menuBurger.js',
+     array(),
+     filemtime(get_template_directory() . '/javascript/menuBurger.js'),
+     true);
+
+     if(is_page()){
+        wp_enqueue_script("Burger");
+     }
+
+     if(is_front_page()){
+        wp_enqueue_script("Carrousel");
+     }
+   
 }
 
 add_action("wp_enqueue_scripts", "cidw_5W5_enqueue");

@@ -10,12 +10,36 @@
 <body <?php body_class("site"); ?>>
 <header class="site_header">
     <section class="site_header_title">
+        <nav class="navDesktop">
         <?php wp_nav_menu(array('menu'=>"navPages",
-                                "container"=>"nav")); ?>
-        <?php /*wp_nav_menu(array('menu'=>"ListeCours",
-                                "container"=>"nav")); */?>
-                              
+                                "container"=>"nav",
+                                "container_class"=>"navDesktopListe")); 
+        ?>
+        <h1>TIM</h1>
+        </nav>
+   
+        <nav class="navMobile">
+            <section>
+                <h1>TIM</h1>
+                <label for="menuNavMobile">
+                        <svg class="menuBurger" viewBox="0 0 100 80" width="40" height="40">
+                        <rect id="line1" x="10" width="80" height="10" rx="7"></rect>
+                        <rect id="line2" x="10" y="32" width="80" height="10" rx="7"></rect>
+                        <rect id="line3" x="10" y="64" width="80" height="10" rx="7"></rect>
+                        </svg>
+                    </label>
+            </section>
+            <input type="checkbox" class="menuNavMobile" id="menuNavMobile">
+            <?php wp_nav_menu(array('menu'=>"navPages",
+                                    "container"=>"nav")); 
+            ?>
+        </nav>
+       
+
+
     </section>
 
 </header>
 
+<?php /*wp_nav_menu(array('menu'=>"ListeCours",
+                                "container"=>"nav")); */?>
