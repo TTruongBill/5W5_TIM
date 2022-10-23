@@ -1,0 +1,46 @@
+.site_main_cours_page{
+    background-color: $color__background-body;
+    color: white;
+    font-family: 'Futura';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+   
+   
+}
+
+.left-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        margin: 0 15px;
+    }
+    h2{
+        text-align: center;
+        font-weight: normal;
+        background-color: #383838;
+        color: $color__background-body;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+    }
+}
+
+.cours{
+    background-color: #623f3f;
+    margin: 20px;
+    border-radius: 0% 13px 13px 13px;
+    display: flex;
+    flex-direction: row;
+
+    h1{
+        font-size: 20px;
+    }
+    p{
+        font-size: 10px;
+    }
+}

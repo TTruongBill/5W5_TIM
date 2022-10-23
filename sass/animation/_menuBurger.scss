@@ -10,6 +10,7 @@
 
 #menuNavMobile:checked ~ .menu-navpages-container{
     transform: translateY(0%);
+    ;
 }
 
 //L'animation du menu burger avec javascript
@@ -36,4 +37,5 @@
 }
 #line1, #line2, #line3{
     transition: all 0.5s;
+    filter: invert(10%) brightness(100%) contrast(100%);
 }

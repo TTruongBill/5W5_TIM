@@ -2,6 +2,9 @@
     background-color: $color__background-body;
     color: white;
     font-family: 'Futura';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .site_main_front_page h1{
