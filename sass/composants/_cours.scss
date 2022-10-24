@@ -7,7 +7,7 @@
     align-items: center;
     
     h3{
-        color: $color__actif
+        color: $color__actif;
     }
    
 }
@@ -30,14 +30,24 @@
         width: 30px;
         height: 30px;
         border-radius: 100%;
-        cursor: pointer;
-
     }
 }
 
-.left-right:hover{
-
+.disabled{
+    color: $color__background-body;
+    opacity: 0.4;
 }
+
+.hover{
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(144, 144, 144);
+    }
+}
+.session{
+    display: none;
+}
+
 .cours{
     background-color: rgb(48,48,48);
     margin: 20px;

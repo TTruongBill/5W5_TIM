@@ -1,17 +1,92 @@
 <?php get_header(); ?>
     <main class="site_main_cours_page">
         <h3>Cours</h3>
-        <section class="left-right">
+        <section class="left-right" id="left-right">
             <h2><</h2>
-            <h1>SESSION 1</h1>
+            <h1 id="session1">SESSION 1</h1>
             <h2>></h2>
         </section>
-        <section class="cours">
-            <p>aadawd</p>
-        <section>
-                <h1>Titre du cours</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt doloremque eligendi porro possimus quibusdam magnam, consequuntur sed corrupti culpa illum consequatur nemo veritatis ut iusto illo unde repudiandae aliquid numquam!</p>
-            </section>
+        <section >
+            <div class="session" id="session1">
+                <?php $post = array('category_name' => 'session-1', 'post_type' => 'post'); 
+                $catPost = get_posts($post) ;
+                foreach ($catPost as $post) : setup_postdata($post); ?> 
+                <section class='cours'> 
+                    <p>adw</p>
+                    <section>
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_excerpt();?></p>
+                    </section>
+                </section>
+                <?php endforeach;?>
+            </div>
+            <div class="session" id="session2">
+                <?php $post = array('category_name' => 'session-2', 'post_type' => 'post'); 
+                $catPost = get_posts($post) ;
+                foreach ($catPost as $post) : setup_postdata($post); ?> 
+                <section class='cours'> 
+                    <p>adw</p>
+                    <section>
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_excerpt();?></p>
+                    </section>
+                </section>
+                <?php endforeach;?>
+            </div>
+            <div class="session" id="session3">
+                <?php $post = array('category_name' => 'session-3', 'post_type' => 'post'); 
+                $catPost = get_posts($post) ;
+                foreach ($catPost as $post) : setup_postdata($post); ?> 
+                <section class='cours'> 
+                    <p>adw</p>
+                    <section>
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_excerpt();?></p>
+                    </section>
+                </section>
+                <?php endforeach;?>
+            </div>
+            <div class="session" id="session4">
+                <?php $post = array('category_name' => 'session-4', 'post_type' => 'post'); 
+                $catPost = get_posts($post) ;
+                foreach ($catPost as $post) : setup_postdata($post); ?> 
+                <section class='cours'> 
+                    <p>adw</p>
+                    <section>
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_excerpt();?></p>
+                    </section>
+                </section>
+                <?php endforeach;?>
+            </div>
+            <div class="session" id="session5">
+                <?php $post = array('category_name' => 'session-5', 'post_type' => 'post'); 
+                $catPost = get_posts($post) ;
+                foreach ($catPost as $post) : setup_postdata($post); ?> 
+                <section class='cours'> 
+                    <p>adw</p>
+                    <section>
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_excerpt();?></p>
+                    </section>
+                </section>
+                <?php endforeach;?>
+            </div>
+            <div class="session" id="session6">
+                <?php $post = array('category_name' => 'session-6', 'post_type' => 'post'); 
+                $catPost = get_posts($post) ;
+                foreach ($catPost as $post) : setup_postdata($post); ?> 
+                <section class='cours'> 
+                    <p>adw</p>
+                    <section>
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_excerpt();?></p>
+                    </section>
+                </section>
+                <?php endforeach;?>
+            </div>
+        </section>
+
         </section>
         <?php /*wp_nav_menu(array('menu'=>"ListeCours",
                                 "container"=>"nav"));

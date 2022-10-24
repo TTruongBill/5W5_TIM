@@ -54,6 +54,13 @@ function cidw_5W5_enqueue(){
     filemtime(get_template_directory() . '/javascript/caroussel.js'),
     true);
 
+     //Javascript carrouselCours
+     wp_register_script('CarrouselCours',
+     get_template_directory_uri() . '/javascript/carrouselSession.js',
+     array(),
+     filemtime(get_template_directory() . '/javascript/carrouselSession.js'),
+     true);
+ 
     //Javascript menuBurger
     wp_register_script('Burger',
     get_template_directory_uri() . '/javascript/menuBurger.js',
@@ -73,6 +80,10 @@ function cidw_5W5_enqueue(){
     wp_enqueue_script("navCouleur");
     }
 
+    if(is_page("cours")){
+        wp_enqueue_script("CarrouselCours");
+    }
+
     if(is_front_page()){
     wp_enqueue_script("Carrousel");
     }
@@ -87,13 +98,16 @@ Function cidw_5w5_enregistre_mon_menu() {
     register_nav_menus(
         array(
             'navPages' => esc_html__('Navigation des pages', 'cidw_5w5'),
-            'ListeCours' => esc_html__('Liste des cours', 'cidw_5w5'),
+            'session1' => esc_html__('Liste des cours de la session 1', 'cidw_5w5'),
+            'session2' => esc_html__('Liste des cours de la session 2', 'cidw_5w5'),
+            'session3' => esc_html__('Liste des cours de la session 3', 'cidw_5w5'),
+            'session4' => esc_html__('Liste des cours de la session 4', 'cidw_5w5'),
+            'session5' => esc_html__('Liste des cours de la session 5', 'cidw_5w5'),
+            'session6' => esc_html__('Liste des cours de la session 6', 'cidw_5w5'),
             'ListeProfs' => esc_html__('Liste des profs', 'cidw_5w5'),
             )
     );
 }
 
 add_action('after_setup_theme', 'cidw_5w5_enregistre_mon_menu');
-
-
 ?>

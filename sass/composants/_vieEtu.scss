@@ -1,0 +1,13 @@
+.site_main_vieEtu_page{
+    background-color: $color__background-body;
+    color: white;
+    font-family: 'Futura';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h3{
+        color: $color__actif;
+    }
+   
+}
