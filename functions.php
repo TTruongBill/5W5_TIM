@@ -54,21 +54,29 @@ function cidw_5W5_enqueue(){
     filemtime(get_template_directory() . '/javascript/caroussel.js'),
     true);
 
-     //Javascript menuBurger
-     wp_register_script('Burger',
-     get_template_directory_uri() . '/javascript/menuBurger.js',
+    //Javascript menuBurger
+    wp_register_script('Burger',
+    get_template_directory_uri() . '/javascript/menuBurger.js',
+    array(),
+    filemtime(get_template_directory() . '/javascript/menuBurger.js'),
+    true);
+
+     //Javascript navCouleur
+     wp_register_script('navCouleur',
+     get_template_directory_uri() . '/javascript/activeNav.js',
      array(),
-     filemtime(get_template_directory() . '/javascript/menuBurger.js'),
+     filemtime(get_template_directory() . '/javascript/activeNav.js'),
      true);
 
-     if(is_page()){
-        wp_enqueue_script("Burger");
-     }
+    if(is_page()){
+    wp_enqueue_script("Burger");
+    wp_enqueue_script("navCouleur");
+    }
 
-     if(is_front_page()){
-        wp_enqueue_script("Carrousel");
-     }
-   
+    if(is_front_page()){
+    wp_enqueue_script("Carrousel");
+    }
+
 }
 
 add_action("wp_enqueue_scripts", "cidw_5W5_enqueue");

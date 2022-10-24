@@ -508,6 +508,10 @@ h6 {
   text-decoration: none;
 }
 
+.navCouleur a {
+  color: rgb(203, 66, 161);
+}
+
 /*************DESKTOP*************/
 @media only screen and (min-width: 600px) {
   .navDesktop {
@@ -556,6 +560,9 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.site_main_cours_page h3 {
+  color: rgb(203, 66, 161);
 }
 
 .left-right {
