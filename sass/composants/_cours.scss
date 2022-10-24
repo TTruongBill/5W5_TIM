@@ -18,6 +18,7 @@
     justify-content: center;
     align-items: center;
 
+
     h1{
         margin: 0 15px;
     }
@@ -29,11 +30,16 @@
         width: 30px;
         height: 30px;
         border-radius: 100%;
+        cursor: pointer;
+
     }
 }
 
+.left-right:hover{
+
+}
 .cours{
-    background-color: #623f3f;
+    background-color: rgb(48,48,48);
     margin: 20px;
     border-radius: 0% 13px 13px 13px;
     display: flex;
