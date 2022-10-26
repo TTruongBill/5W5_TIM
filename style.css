@@ -343,8 +343,22 @@ a:hover, a:active {
 }
 
 body {
-  background-color: #191919;
   height: 100vh;
+  background-color: #191919;
+  color: white;
+  font-family: "Futura";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+body main {
+  background-color: #191919;
+  color: white;
+  font-family: "Futura";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Make sure embeds and iframes fit their containers. */
@@ -370,7 +384,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: rgb(144, 225, 255);
+  color: white;
   font-family: "Sans seriff";
   font-size: 1rem;
 }
@@ -388,15 +402,6 @@ h6 {
 /*----------------------------------- COMPOSANTES -----------------*/
 .error404 > header {
   display: none;
-}
-
-.site_main_front_page {
-  background-color: #191919;
-  color: white;
-  font-family: "Futura";
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .site_main_front_page h1 {
@@ -468,7 +473,7 @@ h6 {
   position: fixed;
   left: 0px;
   top: 0px;
-  width: 100%;
+  width: 100vw;
   height: 50px;
   z-index: 2;
 }
@@ -562,16 +567,9 @@ h6 {
   height: 100%;
 }
 
-.site_main_cours_page {
-  background-color: #191919;
-  color: white;
-  font-family: "Futura";
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .site_main_cours_page h3 {
   color: rgb(203, 66, 161);
+  margin: 80px 0 0 0;
 }
 
 .left-right {
@@ -621,6 +619,37 @@ h6 {
 }
 .cours p {
   font-size: 10px;
+}
+
+.site_main_vieEtudiant_page h3 {
+  color: rgb(203, 66, 161);
+  margin: 80px 0 0 0;
+}
+
+.site_main_prof_page h3 {
+  color: rgb(203, 66, 161);
+  margin: 80px 0 0 0;
+}
+.site_main_prof_page #listeProfs {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100vw;
+  transition: all 0.5s;
+}
+.site_main_prof_page .enseignants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  margin: 10px;
+  height: 70vh;
+  width: 80vw;
+}
+
+.site_main_proj_page h3 {
+  color: rgb(203, 66, 161);
+  margin: 80px 0 0 0;
 }
 
 /*----------------------------------- ANIMATIONS ------------------------*/

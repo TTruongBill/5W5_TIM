@@ -1,4 +1,19 @@
 body {
-	background-color: $color__background-body; // Fallback for when there is no custom background color defined.
 	height: 100vh;
+	background-color: $color__background-body;
+    color: white;
+    font-family: 'Futura';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    
+    main{
+        background-color: $color__background-body;
+        color: white;
+        font-family: 'Futura';
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

@@ -21,8 +21,9 @@ arrows[1].addEventListener("click", () => {
     if(nbSession < 5){
         sessionsListe[nbSession].style.display = "none";
         nbSession++;
-        carrousel_left_right.childNodes[3].textContent = "SESSION " + (nbSession + 1);
         sessionsListe[nbSession].style.display = "block";
+        carrousel_left_right.childNodes[3].textContent = "SESSION " + (nbSession + 1);
+
     }
     
     enableDisableArrows();

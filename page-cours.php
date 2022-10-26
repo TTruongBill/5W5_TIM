@@ -1,89 +1,29 @@
 <?php get_header(); ?>
     <main class="site_main_cours_page">
-        <h3>Cours</h3>
+        <h3><?= get_the_title(); ?></h3>
         <section class="left-right" id="left-right">
             <h2><</h2>
-            <h1 id="session1">SESSION 1</h1>
+            <h1 id="sessions">SESSION 1</h1>
             <h2>></h2>
         </section>
         <section >
             <div class="session" id="session1">
-                <?php $post = array('category_name' => 'session-1', 'post_type' => 'post'); 
-                $catPost = get_posts($post) ;
-                foreach ($catPost as $post) : setup_postdata($post); ?> 
-                <section class='cours'> 
-                    <p>adw</p>
-                    <section>
-                        <h1><?php the_title(); ?></h1>
-                        <p><?php the_excerpt();?></p>
-                    </section>
-                </section>
-                <?php endforeach;?>
+                <?php get_template_part("gabarit/content", "cours",array('data' => array('session-1')));?>
             </div>
             <div class="session" id="session2">
-                <?php $post = array('category_name' => 'session-2', 'post_type' => 'post'); 
-                $catPost = get_posts($post) ;
-                foreach ($catPost as $post) : setup_postdata($post); ?> 
-                <section class='cours'> 
-                    <p>adw</p>
-                    <section>
-                        <h1><?php the_title(); ?></h1>
-                        <p><?php the_excerpt();?></p>
-                    </section>
-                </section>
-                <?php endforeach;?>
+                <?php get_template_part("gabarit/content", "cours",array('data' => array('session-2')));?>
             </div>
             <div class="session" id="session3">
-                <?php $post = array('category_name' => 'session-3', 'post_type' => 'post'); 
-                $catPost = get_posts($post) ;
-                foreach ($catPost as $post) : setup_postdata($post); ?> 
-                <section class='cours'> 
-                    <p>adw</p>
-                    <section>
-                        <h1><?php the_title(); ?></h1>
-                        <p><?php the_excerpt();?></p>
-                    </section>
-                </section>
-                <?php endforeach;?>
+                <?php get_template_part("gabarit/content", "cours",array('data' => array('session-3')));?>
             </div>
             <div class="session" id="session4">
-                <?php $post = array('category_name' => 'session-4', 'post_type' => 'post'); 
-                $catPost = get_posts($post) ;
-                foreach ($catPost as $post) : setup_postdata($post); ?> 
-                <section class='cours'> 
-                    <p>adw</p>
-                    <section>
-                        <h1><?php the_title(); ?></h1>
-                        <p><?php the_excerpt();?></p>
-                    </section>
-                </section>
-                <?php endforeach;?>
+                <?php get_template_part("gabarit/content", "cours",array('data' => array('session-4')));?>
             </div>
             <div class="session" id="session5">
-                <?php $post = array('category_name' => 'session-5', 'post_type' => 'post'); 
-                $catPost = get_posts($post) ;
-                foreach ($catPost as $post) : setup_postdata($post); ?> 
-                <section class='cours'> 
-                    <p>adw</p>
-                    <section>
-                        <h1><?php the_title(); ?></h1>
-                        <p><?php the_excerpt();?></p>
-                    </section>
-                </section>
-                <?php endforeach;?>
+                <?php get_template_part("gabarit/content", "cours",array('data' => array('session-5')));?>
             </div>
             <div class="session" id="session6">
-                <?php $post = array('category_name' => 'session-6', 'post_type' => 'post'); 
-                $catPost = get_posts($post) ;
-                foreach ($catPost as $post) : setup_postdata($post); ?> 
-                <section class='cours'> 
-                    <p>adw</p>
-                    <section>
-                        <h1><?php the_title(); ?></h1>
-                        <p><?php the_excerpt();?></p>
-                    </section>
-                </section>
-                <?php endforeach;?>
+                <?php get_template_part("gabarit/content", "cours",array('data' => array('session-6')));?>
             </div>
         </section>
 
