@@ -37,7 +37,7 @@ arrows[0].addEventListener("click", () => {
     //désactiver ou activer la flèche de gauche
     enableDisableArrows();
 })
-
+//Lorsque la flèche de droite est clicker,
 arrows[1].addEventListener("click", () => {
     listeEnseignant.classList.remove("rajoutLeft");//Enlever la classe qui rajoute un style left
     //Si le nbProf est en bas de 13 et qu'il n'est pas égal à 12, 
@@ -80,7 +80,7 @@ function enableDisableArrows(){
 function enleverProf(){
     //Si nbProf est en haut de 0 et en bas de 14
     //rajouter un display none à tous les éléments du array de profs
-    if(nbProf > 0 && nbProf < 14){
+    if(nbProf => 0 && nbProf <= 14){
         for(let i = 0; i < enseignants.length; i++){
             enseignants[i].style.display= "none";
         }
