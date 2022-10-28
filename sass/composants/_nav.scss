@@ -48,7 +48,7 @@
 #menu-navpages ul,#menu-navpages-1 ul{
     height: 100%;
 }
-#menu-navpages li, #menu-navpages-1 li  {
+#menu-navpages-1 li  {
     list-style: none;
     height: 100%;
     width: 100%;
@@ -89,6 +89,13 @@
     .Titre{
         font-size: 40px;
     }
-    
+    #menu-navpages li{
+        list-style: none;
+        height: 100%;
+        padding: 20px 15px 20px 0;
+        a{
+            text-decoration: none;
+        }
+    }
 }
 

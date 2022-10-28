@@ -44,6 +44,8 @@
 
 .session{
     display: none;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cours{
@@ -52,6 +54,8 @@
     border-radius: 0% 13px 13px 13px;
     display: flex;
     flex-direction: row;
+    width: 92%;
+    justify-content: center;
 
     h1{
         font-size: 20px;
@@ -59,4 +63,30 @@
     p{
         font-size: 10px;
     }
+}
+
+/**************/
+@media only screen and (min-width: 600px) and (max-width: 820px){
+    .session{
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+    }
+    .cours{
+        width: 43%;
+    }
+    
+}
+
+@media only screen and (min-width: 820px){
+    .session{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cours{
+        width: 45%;
+    } 
+
+  
 }

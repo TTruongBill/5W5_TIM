@@ -6,7 +6,7 @@
             <h1 id="sessions">SESSION 1</h1>
             <button type="button">></button>
         </section>
-        <section >
+        <section id="listeSession">
             <div class="session" id="session1">
                 <?php get_template_part("gabarit/content", "cours",array('data' => array('session-1')));?>
             </div>

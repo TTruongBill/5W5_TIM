@@ -1,3 +1,4 @@
+// à commenter plus tard, si on utilise ce carrousel
 let galerie_img = document.querySelectorAll('.gallerie1 .wp-block-image img');
 let boite_carrousel_nav = document.querySelector(".boite_carrousel_nav");
 let boite_carrousel_img = document.querySelector(".boite_carrousel_img");
