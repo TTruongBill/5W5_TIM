@@ -1,7 +1,36 @@
 .site_footer{
     background-color: $color__background-footer;
-    position:absolute;
-    bottom: 0;
     width: 100%;
     color: white;
+
+    padding: 40px 0 50px 50px;
+    .footer_section{
+        h5{
+            margin: 5px 0;
+            padding: 0;
+        }
+        h4{
+            margin: 35px 0 5px 0;
+            padding: 0;
+            
+        }
+        
+        .media_social_liste{
+            display: flex;
+            flex-direction: row;
+
+            p{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                color: black;
+                background-color: white;
+                padding: 0;
+                margin: 0 0 20px 0;
+            }
+        }
+    }
 }

@@ -54,21 +54,51 @@ function cidw_5W5_enqueue(){
     filemtime(get_template_directory() . '/javascript/caroussel.js'),
     true);
 
-     //Javascript menuBurger
-     wp_register_script('Burger',
-     get_template_directory_uri() . '/javascript/menuBurger.js',
+     //Javascript carrouselCours
+     wp_register_script('CarrouselCours',
+     get_template_directory_uri() . '/javascript/carrouselSession.js',
      array(),
-     filemtime(get_template_directory() . '/javascript/menuBurger.js'),
+     filemtime(get_template_directory() . '/javascript/carrouselSession.js'),
      true);
 
-     if(is_page()){
-        wp_enqueue_script("Burger");
-     }
+     //Javascript carrouselProf
+     wp_register_script('CarrouselProf',
+     get_template_directory_uri() . '/javascript/carrouselProf.js',
+     array(),
+     filemtime(get_template_directory() . '/javascript/carrouselProf.js'),
+     true);
+ 
+    //Javascript menuBurger
+    wp_register_script('Burger',
+    get_template_directory_uri() . '/javascript/menuBurger.js',
+    array(),
+    filemtime(get_template_directory() . '/javascript/menuBurger.js'),
+    true);
 
-     if(is_front_page()){
-        wp_enqueue_script("Carrousel");
-     }
-   
+     //Javascript navCouleur
+     wp_register_script('navCouleur',
+     get_template_directory_uri() . '/javascript/activeNav.js',
+     array(),
+     filemtime(get_template_directory() . '/javascript/activeNav.js'),
+     true);
+
+    if(is_page()){
+    wp_enqueue_script("Burger");
+    wp_enqueue_script("navCouleur");
+    }
+
+    if(is_page("cours")){
+        wp_enqueue_script("CarrouselCours");
+    }
+
+    if(is_page("prof")){
+        wp_enqueue_script("CarrouselProf");
+    }
+
+    if(is_front_page()){
+    wp_enqueue_script("Carrousel");
+    }
+
 }
 
 add_action("wp_enqueue_scripts", "cidw_5W5_enqueue");
@@ -79,13 +109,15 @@ Function cidw_5w5_enregistre_mon_menu() {
     register_nav_menus(
         array(
             'navPages' => esc_html__('Navigation des pages', 'cidw_5w5'),
-            'ListeCours' => esc_html__('Liste des cours', 'cidw_5w5'),
+            'session' => esc_html__('Liste des cours', 'cidw_5w5'),
             'ListeProfs' => esc_html__('Liste des profs', 'cidw_5w5'),
+            'test' => esc_html__('test', 'cidw_5w5'),
             )
     );
 }
 
 add_action('after_setup_theme', 'cidw_5w5_enregistre_mon_menu');
 
-
+add_theme_support('post-thumbnails');
+add_theme_support('widgets');
 ?>
