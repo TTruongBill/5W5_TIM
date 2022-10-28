@@ -16,28 +16,32 @@
     h1{
         margin: 0 15px;
     }
-    h2{
+    button{
         text-align: center;
         font-weight: normal;
         background-color: #383838;
         color: $color__background-body;
         width: 30px;
         height: 30px;
+        border: none;
         border-radius: 100%;
+        
+        &:disabled{
+            cursor: default;
+            color: $color__background-body;
+            opacity: 0.4;
+        }
+
+        &:hover:enabled{
+            background-color: rgb(144, 144, 144);
+            cursor: pointer;
+        }
+        /*&:active{
+
+        }*/
     }
 }
 
-.disabled{
-    color: $color__background-body;
-    opacity: 0.4;
-}
-
-.hover{
-    cursor: pointer;
-    &:hover{
-        background-color: rgb(144, 144, 144);
-    }
-}
 .session{
     display: none;
 }

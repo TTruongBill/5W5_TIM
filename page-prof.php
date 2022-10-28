@@ -2,9 +2,9 @@
     <main class="site_main_prof_page">
         <h3><?= get_the_title(); ?></h3>
         <section class="left-right">
-            <h2><</h2>
+            <button type="button"><</button>
             <h1>LES PROFS DU TIM</h1>
-            <h2>></h2>
+            <button type="button">></button>
         </section>
         <section id="listeProfs">
              <?php 

@@ -2,9 +2,9 @@
     <main class="site_main_cours_page">
         <h3><?= get_the_title(); ?></h3>
         <section class="left-right" id="left-right">
-            <h2><</h2>
+            <button type="button"><</button>
             <h1 id="sessions">SESSION 1</h1>
-            <h2>></h2>
+            <button type="button">></button>
         </section>
         <section >
             <div class="session" id="session1">
