@@ -383,19 +383,11 @@ button,
 input,
 select,
 optgroup,
-textarea {
+textarea,
+p {
   color: white;
-  font-family: "Sans seriff";
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  clear: both;
 }
 
 /*----------------------------------- LAYOUT -----------------*/
@@ -448,17 +440,9 @@ h6 {
   display: flex;
   flex-direction: row;
 }
-.site_footer .footer_section .media_social_liste p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  color: black;
-  background-color: white;
-  padding: 0;
-  margin: 0 0 20px 0;
+.site_footer .footer_section .media_social_liste .wp-social-link {
+  background-color: rgb(28, 28, 28);
+  color: white;
 }
 
 /*************MOBILE*************/
@@ -530,11 +514,11 @@ h6 {
   padding: 15px 0;
 }
 #menu-navpages-1 li a:hover {
-  background-color: rgba(112, 112, 112, 0.534);
+  background-color: rgb(72, 72, 241);
 }
 
 .navCouleur a {
-  color: rgb(203, 66, 161);
+  color: rgb(72, 72, 241);
 }
 
 /*************DESKTOP*************/
@@ -590,7 +574,7 @@ h6 {
 }
 
 .site_main_cours_page h3 {
-  color: rgb(203, 66, 161);
+  color: rgb(72, 72, 241);
   margin: 80px 0 0 0;
 }
 
@@ -637,7 +621,7 @@ h6 {
   margin: 20px;
   border-radius: 0% 13px 13px 13px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 92%;
   justify-content: center;
 }
@@ -645,7 +629,33 @@ h6 {
   font-size: 20px;
 }
 .cours p {
-  font-size: 10px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 30px;
+  height: 100%;
+}
+.cours p button {
+  margin: 13px 0;
+}
+.cours p button:hover {
+  background-color: rgb(144, 144, 144);
+  cursor: pointer;
+}
+.cours section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+
+.cours_ouvrir {
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(72, 72, 241);
+  color: white;
+  width: 20vw;
 }
 
 /**************/
@@ -668,12 +678,12 @@ h6 {
   }
 }
 .site_main_vieEtudiant_page h3 {
-  color: rgb(203, 66, 161);
+  color: rgb(72, 72, 241);
   margin: 80px 0 0 0;
 }
 
 .site_main_prof_page h3 {
-  color: rgb(203, 66, 161);
+  color: rgb(72, 72, 241);
   margin: 80px 0 0 0;
 }
 .site_main_prof_page #right {
@@ -688,28 +698,70 @@ h6 {
   position: relative;
   transition: all 0.5s;
 }
-.site_main_prof_page #imgProf {
-  display: none;
+.site_main_prof_page .imgProf {
+  display: flex;
+}
+.site_main_prof_page .titreProf {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.site_main_prof_page .contenuProf {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: rgb(107, 107, 107);
+}
+.site_main_prof_page .contenuProf img {
+  width: 100vw;
 }
 .site_main_prof_page .enseignants {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(107, 107, 107);
   margin: 10px;
-  height: 70vh;
-  width: 80vw;
 }
-.site_main_prof_page .rajoutLeft {
-  left: 180px;
-}
-.site_main_prof_page .rajoutRight {
-  right: 180px;
+.site_main_prof_page .left-right {
+  order: 2;
 }
 
 @media only screen and (min-width: 600px) {
   .site_main_prof_page {
     flex-direction: row;
+    justify-content: start;
+    width: 100%;
+  }
+  .site_main_prof_page .left-right {
+    order: 0;
+    flex-direction: column;
+    padding: 0 25px 0 43px;
+    background-color: rgba(31, 31, 31, 0.798);
+    margin-right: 40px;
+    height: 100%;
+  }
+  .site_main_prof_page .left-right button:nth-of-type(1) {
+    transform: rotateZ(90deg);
+  }
+  .site_main_prof_page .left-right button:nth-of-type(2) {
+    transform: rotateZ(90deg);
+  }
+  .site_main_prof_page .left-right img {
+    width: 10vw;
+  }
+  .site_main_prof_page .contenuProf {
+    width: auto;
+  }
+  .site_main_prof_page .contenuProf img {
+    width: auto;
+  }
+  #right {
+    width: 90vw;
+  }
+  #right #listeProfs {
+    width: 100%;
   }
   #bodyProf {
     display: flex;
@@ -722,7 +774,6 @@ h6 {
     height: 100vh;
   }
   .enseignants {
-    background-color: rgb(48, 48, 48);
     margin: 20px;
     border-radius: 0% 13px 13px 13px;
     display: flex;
@@ -730,9 +781,28 @@ h6 {
     width: 92%;
     justify-content: center;
   }
+  .enseignants .titreProf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .enseignants .contenuProf {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(107, 107, 107);
+    border-radius: 0% 13px 13px 13px;
+    width: 100%;
+  }
+  .enseignants .contenuProf img {
+    width: 100%;
+    border-radius: 0% 13px 13px 13px;
+  }
 }
 .site_main_proj_page h3 {
-  color: rgb(203, 66, 161);
+  color: rgb(72, 72, 241);
   margin: 80px 0 0 0;
 }
 

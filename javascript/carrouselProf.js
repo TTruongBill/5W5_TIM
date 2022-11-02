@@ -1,4 +1,4 @@
-let arrows = document.querySelectorAll(".left-right button");//var contenant les flèches gauche droite des carrousels
+/*let arrows = document.querySelectorAll(".left-right button");//var contenant les flèches gauche droite des carrousels
 let enseignants = document.getElementsByClassName("enseignants");//var contenant la liste des enseignants(un par un) - 14 objets(profs)
 let listeEnseignant = document.getElementById("listeProfs");//var contenant la boite avec tous les enseignants - (1 object)
 let imgCarrousel = document.getElementById("imgProf");//Var contenant la boite avec tous les images des enseignants
@@ -104,6 +104,54 @@ function enableDisableArrows(){
         arrows[1].disabled = false;
     }
 }
+
+//Fonction qui permet d'enlever l'affichage de tous les profs
+function enleverProf(){
+    //Si nbProf est en haut de 0 et en bas de 14
+    //rajouter un display none à tous les éléments du array de profs
+    if(nbProf => 0 && nbProf < 14){
+        for(let i = 0; i < enseignants.length; i++){
+            enseignants[i].style.display= "none";
+        }
+    } 
+}*/
+let arrows = document.querySelectorAll(".left-right button");//var contenant les flèches gauche droite des carrousels
+let enseignants = document.getElementsByClassName("enseignants");//var contenant la liste des enseignants(un par un) - 14 objets(profs)
+let listeEnseignant = document.getElementById("listeProfs");//var contenant la boite avec tous les enseignants - (1 object)
+let imgCarrousel = document.getElementsByClassName("imgProf");//Var contenant la boite avec tous les images des enseignants
+let nbRandom = Math.floor(Math.random() * 14);//nombre aléatoire pour générer un prof différent à chaque refresh(pour format desktop)
+let counter = document.getElementById("counter");
+
+let nbProf = 0;//nb pour incrémenter le prof dans lequel on est rendu
+//***************Initialisation de la page **********************
+enleverProf();//Enlever tous les profs
+
+enseignants[nbProf].style.display = "flex";//Afficher le prof selon le prof choisi
+
+//Lorsque la flèche de gauche est clicker,
+arrows[0].addEventListener("click", () => {
+    enleverProf();//enlever tous les profs
+    if(nbProf > 0 && nbProf <= 14){
+        nbProf--;//Décrémenter
+    }else if(nbProf == 0){
+        nbProf = 13;
+    }
+    enseignants[nbProf].style.display = "flex";
+
+    counter.innerHTML = nbProf + 1 + "/14";
+})
+//Lorsque la flèche de droite est clicker,
+arrows[1].addEventListener("click", () => {
+    enleverProf();//enlever tous les profs
+
+    if(nbProf >= 0 && nbProf < 13 ) {
+        nbProf++;//Incrémenter
+    }else if(nbProf == 13){
+        nbProf = 0;//Incrémenter
+    }
+    enseignants[nbProf].style.display = "flex";
+    counter.innerHTML = nbProf + 1 + "/14";
+})
 
 //Fonction qui permet d'enlever l'affichage de tous les profs
 function enleverProf(){
