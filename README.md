@@ -1,6 +1,10 @@
 # 5W5 TIM
 But : Faire un site avec Wordpress qui a pour but de mettre en valeur la techniques en intégration multimédia.
+
+**
 Impossible de retourner sur la page d'accueil en ce moment, le text tim sera remplacer par un logo qui mènera vers la page d'accueil.
+**
+
 # Pages
 En cours:
 - accueil
@@ -16,8 +20,9 @@ En cours:
 - inscription
 
 # CSS
-- base de format mobile en cours !prioritaire
+- base de format mobile en cours (prioritaire)
 - base de format desktop en cours
+- adaptation de mobile à desktop en cours
 
 en format mobile:
 - nav terminé
@@ -28,14 +33,15 @@ en format mobile:
 en format mobile :
 - les animations du menu burger terminé
 - le carrousel de la page cours terminé
-- le carousel de la page enseignants terminé
+- le carousel de la page enseignants terminé (informations des profs et le numéro du prof auquel on est rendu)
 - la nav de la page actif sera une couleur différente terminé
 
 en format desktop:
-- le carrousel de la page de cours en cours
+- le carrousel de la page de cours terminé
+- le carrousel de la page enseignants terminé
 
 à faire:
-- le carrousel de la page enseignants
+- le carrousel de la page enseignants (images)
 - le carrousel de la page vie étudiante
 
 # Product Backlog
