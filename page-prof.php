@@ -32,7 +32,7 @@
                 </section>
                 <?php endforeach;?>
             </section>
-            <p id="counter">1/14</p>
+            <p id="counter"></p>
         </section>
     </main>
 <?php get_footer(); ?>

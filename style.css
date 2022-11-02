@@ -6,7 +6,7 @@ Description :
 version : 1.0
 Requires PHP :7.4
 Licence: GNU General Public License v2 or later
-Text Domain : cidw-4w4
+Text Domain : cidw-5W5
 */
 /*----------------------------------- INITIALISATION -----------------*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -325,6 +325,7 @@ template {
 /*----------------- TYPO */
 /* ---------------- Taille H */
 /* ---------------- Taille P*/
+/*------------------Font principal-----*/
 /*----------------------------------- BASE----------------------*/
 a {
   color: rgb(255, 255, 255);
@@ -344,9 +345,10 @@ a:hover, a:active {
 
 body {
   height: 100vh;
+  width: 100vw;
   background-color: #191919;
   color: white;
-  font-family: "Futura";
+  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -355,7 +357,7 @@ body {
 body main {
   background-color: #191919;
   color: white;
-  font-family: "Futura";
+  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -383,14 +385,12 @@ button,
 input,
 select,
 optgroup,
-textarea,
-p {
+textarea {
   color: white;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
 }
 
-/*----------------------------------- LAYOUT -----------------*/
 /*----------------------------------- COMPOSANTES -----------------*/
 .error404 > header {
   display: none;
