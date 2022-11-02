@@ -3,28 +3,132 @@
         color: $color__actif;
         margin: 80px 0 0 0;
     }
-
+    #right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     #listeProfs{
         display: flex;
         flex-direction: row;
         position: relative;
         transition: all 0.5s;
     }
+    .imgProf{
+        display: flex;
+    }
+    .titreProf {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
+    }
+
+    .contenuProf{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        background-color: rgb(107, 107, 107);
+
+        img{
+            width: 100vw;
+        }
+    }
     .enseignants{
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: red;
+        
         margin: 10px;
-        height: 70vh;
-        width: 80vw;
     }
     
-    .rajoutLeft{
-        left: 180px;
-    }
-    .rajoutRight{
-        right: 180px;
+    .left-right{
+        order: 2;
     }
 }
+@media only screen and (min-width: 600px){
+    .site_main_prof_page {
+        flex-direction: row;
+        justify-content: start;
+        width: 100%;
+
+        .left-right{
+            order: 0;
+            flex-direction: column;
+            padding: 0 25px 0 43px;
+            background-color: rgba(31, 31, 31, 0.798);
+            margin-right: 40px;
+            height: 100%;
+
+            button:nth-of-type(1){
+                transform: rotateZ(90deg);
+            }
+            button:nth-of-type(2){
+                transform: rotateZ(90deg);
+            }
+            img{
+                width: 10vw;
+            }
+        }
+
+        .contenuProf{
+            width: auto;
+            img{
+                width: auto;
+            }
+        }
+    }
+    #right{
+        width: 90vw;
+
+        #listeProfs{
+            width: 100%;
+        }
+    }
+    #bodyProf{
+        display: flex;
+        flex-direction: row;
+    }
+    #imgProf{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(101, 101, 101, 0.66);
+        height: 100vh;
+    }
+    .enseignants{
+        margin: 20px;
+        border-radius: 0% 13px 13px 13px;
+        display: flex;
+        flex-direction: row;
+        width: 92%;
+        justify-content: center;
+
+        .titreProf {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+        }
+        .contenuProf{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(107, 107, 107);
+            border-radius: 0% 13px 13px 13px;
+            width: 100%;
+    
+            img{
+                width: 100%;
+                border-radius: 0% 13px 13px 13px;
+            }
+        }
+    }
+    
+}
+

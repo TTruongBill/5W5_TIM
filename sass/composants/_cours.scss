@@ -53,16 +53,47 @@
     margin: 20px;
     border-radius: 0% 13px 13px 13px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 92%;
     justify-content: center;
 
     h1{
         font-size: 20px;
     }
+   
     p{
-        font-size: 10px;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 30px;
+        height: 100%;
+
+        button{
+            margin: 13px 0;
+
+
+        &:hover{
+            background-color: rgb(144, 144, 144);
+            cursor: pointer;
+        }
+        }
     }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 30px;
+        
+}
+}
+.cours_ouvrir{
+    border: none;
+    border-radius: 10px;
+    background-color: $color__actif;
+    color: $color__text-main;
+    width: 20vw;
 }
 
 /**************/

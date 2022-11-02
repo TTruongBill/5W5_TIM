@@ -62,7 +62,7 @@
         padding: 15px 0;
 
         &:hover{
-            background-color: rgba(112, 112, 112, 0.534);
+            background-color: $color__actif;
         }
     }
 }
@@ -81,6 +81,9 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        background-color: $color__background-nav;
+        border-bottom: 1px solid #d7d7d716;
+        width: 100%;
     }
 
     .navMobile{
