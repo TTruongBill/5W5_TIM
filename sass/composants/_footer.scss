@@ -1,7 +1,28 @@
 .site_footer{
-    background-color: rgb(19, 19, 19);
-    position:absolute;
-    bottom: 0;
+    background-color: $color__background-footer;
     width: 100%;
-    color: white;
+    color: $color__text-main;
+
+    padding: 40px 0 50px 50px;
+    .footer_section{
+        h5{
+            margin: 5px 0;
+            padding: 0;
+        }
+        h4{
+            margin: 35px 0 5px 0;
+            padding: 0;
+            
+        }
+        
+        .media_social_liste{
+            display: flex;
+            flex-direction: row;
+
+            .wp-social-link{
+                background-color: rgb(28, 28, 28);
+                color: white;
+            }
+        }
+    }
 }

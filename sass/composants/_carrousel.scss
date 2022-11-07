@@ -7,7 +7,7 @@
     transition: all 0.5s;
     width: 100%;
     position: absolute;
-
+    left: 0;
     &.img-ouvrir{
         opacity: 1;
     }
@@ -15,7 +15,7 @@
 .boite_carrousel_nav{
     position: absolute;
     right: 50%;
-    margin: 26em 0 0 0;
+    margin: 20em 0 0 0;
 }
 
 .gallerie1{

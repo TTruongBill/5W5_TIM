@@ -1,0 +1,46 @@
+//Menu qui monte et qui descend en mobile
+#menuNavMobile{
+    display: none;
+}
+
+.menu-navpages-container{
+    transform: translateY(-160%);
+    transition: all 0.5s;
+}
+
+#menuNavMobile:checked ~ .menu-navpages-container{
+    transform: translateY(0%);
+}
+
+//L'animation du menu burger avec javascript
+.menuBurger{
+    transition: opacity 0.5s;
+    transition: background-color 0.3s;
+
+    rect{
+        transition: all 0.5s;
+        filter: invert(10%) brightness(100%) contrast(100%);
+    }
+}
+.ligne1X{
+    transform: rotateZ(45deg) translate(14px, -13px);
+}
+.ligne2X{
+    opacity: 0;
+}
+.ligne3X{
+    transform: rotateZ(-45deg) translate(-43px, -5px);
+    
+}
+
+.circleBackground{
+    background-color: rgb(193, 193, 193);
+    border-radius: 100%;
+
+    rect{
+        filter: invert(89%) brightness(100%) contrast(100%);
+    }
+}
+.circleBackground:hover{
+    background-color: rgb(144, 144, 144);
+}

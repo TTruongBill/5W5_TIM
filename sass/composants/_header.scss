@@ -1,13 +1,13 @@
 .site_header{
-    background-color: rgb(37, 37, 37);
+    background-color: $color__background-header;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
-.site_header title{
-    background-color: rgb(37, 37, 37);
-    display: flex;
-    justify-content: center;
+.site_header_title{
+    background-color: $color__background-header;
+    width: 100%;
 }
 
 .site_header h1{
@@ -17,9 +17,6 @@
 
 .site_header nav ul {
     display: flex;
-    width: 100vw;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
 }
 
