@@ -3,8 +3,9 @@
     $catPost = get_posts(array('category_name' => $args['data'][0], "numberposts" => -1)) ;
     foreach ($catPost as $post) : setup_postdata($post); //Loop permettant de rajouter le code suivant
     $content = get_the_content();  //Mettre le contenu dans une variable
-    ?> 
+?> 
     <section class='cours'> 
+        <p class="cours_fermer">X</p>
         <section>
             <h1><?php the_title(); ?></h1>
             <p>icone</p>
