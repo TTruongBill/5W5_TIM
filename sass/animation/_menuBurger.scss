@@ -16,6 +16,11 @@
 .menuBurger{
     transition: opacity 0.5s;
     transition: background-color 0.3s;
+
+    rect{
+        transition: all 0.5s;
+        filter: invert(10%) brightness(100%) contrast(100%);
+    }
 }
 .ligne1X{
     transform: rotateZ(45deg) translate(14px, -13px);
@@ -27,13 +32,15 @@
     transform: rotateZ(-45deg) translate(-43px, -5px);
     
 }
+
 .circleBackground{
     background-color: rgb(193, 193, 193);
     border-radius: 100%;
+
+    rect{
+        filter: invert(89%) brightness(100%) contrast(100%);
+    }
 }
 .circleBackground:hover{
     background-color: rgb(144, 144, 144);
-}
-#line1, #line2, #line3{
-    transition: all 0.5s;
 }

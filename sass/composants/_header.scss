@@ -2,10 +2,12 @@
     background-color: $color__background-header;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
-.site_header title{
+.site_header_title{
     background-color: $color__background-header;
+    width: 100%;
 }
 
 .site_header h1{

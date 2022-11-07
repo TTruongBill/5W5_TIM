@@ -1,15 +1,52 @@
 # 5W5 TIM
+But : Faire un site avec Wordpress qui a pour but de mettre en valeur la techniques en intégration multimédia.
 
-Début du projet, rajout de 3 menus différent : cours, profs et pages.
+**
+Impossible de retourner sur la page d'accueil en ce moment, le text tim sera remplacer par un logo qui mènera vers la page d'accueil.
+**
+
 # Pages
-Rajout d'une page d'accueil et d'une page 404.
-# Composantes
-Rajout de composants : header et footer.
+En cours:
+- accueil
+- cours
+- enseignants
+
+à finir :
+- projets
+- vie étudiante
+
+à ajouter:
+- avenir
+- inscription
+
 # CSS
-CSS : Rajout de normalize, début d'un nav, début de la page d'accueil, début de variables.
+- base de format mobile en cours (prioritaire)
+- base de format desktop en cours
+- adaptation de mobile à desktop en cours
+
+en format mobile:
+- nav terminé
+- composante de cours terminé
+- base de composante pour les profs terminé
+
+# JS
+en format mobile :
+- les animations du menu burger terminé
+- le carrousel de la page cours terminé
+- le carousel de la page enseignants terminé (informations des profs et le numéro du prof auquel on est rendu)
+- la nav de la page actif sera une couleur différente terminé
+
+en format desktop:
+- le carrousel de la page de cours terminé
+- le carrousel de la page enseignants terminé
+
+à faire:
+- le carrousel de la page enseignants (images)
+- le carrousel de la page vie étudiante
+
 # Product Backlog
 lien google-sheet:https://docs.google.com/spreadsheets/d/1S9ZxRREMPuLLbzwBsvkTdu9Du900yJM3RaKV92jllL8/edit#gid=1447645501
 # Siteground
-lien siteGround(non-utilisable pour le moment) : https://eddym31.sg-host.com/
+lien siteGround: https://timm176.sg-host.com/
 # Backlog
 Lien github projects : https://github.com/users/k1polo/projects/3

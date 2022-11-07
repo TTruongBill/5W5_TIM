@@ -1,14 +1,15 @@
 /* ---------------- BACKGROUND */
-$color__background-header : rgb(60, 60, 60);
-$color__background-body : rgb(17, 17, 17);
+$color__background-header : #191919;
+$color__background-body : #191919;
 $color__background-footer : rgb(0, 0, 0);
-$color__background-nav : rgb(26, 26, 26);
+$color__background-nav : #191919;
 
 /* ---------------- LIENS */
 $color__link : rgb(255, 255, 255);
 $color__link-hover : rgb(186, 175, 255);
 $color__link-visited : rgb(255, 255, 255);
-$color__linkg-on : rgb(186, 175, 255);
+$color__link-on : rgb(186, 175, 255);
 
 /*----------------- TYPO */
-$color__text-main : rgb(144,225,735);
+$color__actif : rgb(72, 72, 241);
+$color__text-main : white;

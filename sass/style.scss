@@ -6,7 +6,7 @@ Description :
 version : 1.0
 Requires PHP :7.4
 Licence: GNU General Public License v2 or later
-Text Domain : cidw-4w4
+Text Domain : cidw-5W5
 */
 
 /*----------------------------------- INITIALISATION -----------------*/
@@ -23,8 +23,6 @@ Text Domain : cidw-4w4
 /*TYPOGRAPHY*/
 @import "base/typography/typography";
 
-/*----------------------------------- LAYOUT -----------------*/
-
 /*----------------------------------- COMPOSANTES -----------------*/
 @import "composants/404";
 @import "composants/front-page";
@@ -32,5 +30,9 @@ Text Domain : cidw-4w4
 @import "composants/footer";
 @import "composants/nav";
 @import "composants/carrousel";
+@import "composants/cours";
+@import "composants/vieEtu";
+@import "composants/prof";
+@import "composants/proj";
 /*----------------------------------- ANIMATIONS ------------------------*/
 @import "animation/menuBurger";
