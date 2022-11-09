@@ -1,0 +1,60 @@
+.site_main_cours_page{
+   
+    .lirePlusCours {
+        width: 92%;
+
+        &:hover {
+            scale: 1;
+        }
+    } 
+
+    .animCarrouselCours {
+        animation-name: animCarrouselCours();
+    }
+}
+
+h1{
+    margin: 0 15px;
+}
+
+button{
+    transition: 0.15s;
+
+    &:hover:enabled{
+        background-color: $color__actif;
+        cursor: pointer;
+        scale: 1.1;
+        transition-timing-function: cubic-bezier(.78,0,.25,1.48);
+    }
+}
+
+.cours{
+
+    p{
+        button{
+            transition: 0.3s;
+        
+
+        &:hover{
+            background-color: $color__text-main;
+            color: $color__actif;
+            scale: 1;
+            }
+        }
+    }
+    &:hover {
+        transition: 0.3s;
+        scale: 1.05;
+        transition-timing-function: cubic-bezier(.78,0,.25,1.48);
+    }
+}
+
+@keyframes animCarrouselCours {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1;
+    }
+}

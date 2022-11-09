@@ -31,7 +31,7 @@ function fermerCoursAuto(cours, fermer, ouvrir){
         fermer.style.display = "none";
         ouvrir.style.display = "block";
         changeOrder();
-    
+
 }
 
 function changeOrder(){
@@ -51,4 +51,5 @@ function changeOrder(){
         }
 
     }
+
 }
