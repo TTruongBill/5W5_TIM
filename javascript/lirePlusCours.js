@@ -26,5 +26,3 @@ function fermerCoursAuto(cours, fermer, ouvrir){
         cours.style.order = 0;
     
 }
-
-    

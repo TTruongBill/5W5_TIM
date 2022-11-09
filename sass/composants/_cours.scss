@@ -1,7 +1,7 @@
 .site_main_cours_page{
     h3{
         color: $color__actif;
-        margin: 40px 0 0 0;
+        margin: 50px 0 0 0;
         letter-spacing: 10px;
     }
    
@@ -80,7 +80,7 @@
 
 
         &:hover{
-            background-color: rgb(144, 144, 144);
+            // background-color: rgb(144, 144, 144);
             cursor: pointer;
         }
         }
