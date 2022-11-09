@@ -3,6 +3,7 @@ let arrows = document.querySelectorAll("#left-right button");//var contenant les
 let nbSession = 0;//nb pour incrémenter la session dans laquelle on est rendu
 let sessionsListe = document.getElementsByClassName("session");//var contenant la liste des session(un par un) - 6 objets(session)
 let mediaQuery = window.matchMedia("(min-width: 600px)");
+
 //Initialisation de la page afficher session 1
 sessionsListe[0].style.display = "flex";
 enableDisableArrows();//désactiver la flèche de gauche
@@ -30,6 +31,11 @@ arrows[1].addEventListener("click", () => {
     
     enableDisableArrows();
 })
+
+let titreCours = document.querySelectorAll(".cours > section > h1");
+for(let i = 0; i < titreCours.length; i++){
+    titreCours[i].innerHTML = titreCours[i].innerHTML.toUpperCase();
+}
 //Fonction qui permet d'activer ou désactiver les boutons pour changer de profs
 function enableDisableArrows(){
     //Si nbSession est égal à 0, la flèche de gauche est désactivé
