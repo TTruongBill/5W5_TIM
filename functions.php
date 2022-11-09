@@ -11,6 +11,7 @@ function cidw_5W5_enqueue(){
     "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap",
     false);
     
+
     /*
     wp_enqueue_style('Font');
     
@@ -178,4 +179,25 @@ function my_register_sidebars(){
 }
 
 add_action('widgets_init', 'my_register_sidebars');
+
+    /**
+     * Font Awesome Kit Setup
+     * 
+     * This will add your Font Awesome Kit to the front-end, the admin back-end,
+     * and the login screen area.
+     */
+    if (! function_exists('fa_custom_setup_kit') ) {
+        function fa_custom_setup_kit($kit_url = 'https://kit.fontawesome.com/42d073a087.js') {
+        foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts', 'login_enqueue_scripts' ] as $action ) {
+            add_action(
+            $action,
+            function () use ( $kit_url ) {
+                wp_enqueue_script( 'font-awesome-kit', $kit_url, [], null );
+            }
+            );
+        }
+        }
+    }
+
+    fa_custom_setup_kit('https://kit.fontawesome.com/42d073a087.js');
 ?>

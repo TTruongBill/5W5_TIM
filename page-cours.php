@@ -1,10 +1,10 @@
 <?php get_header(); ?>
     <main class="site_main_cours_page">
-        <h3><?= get_the_title(); ?></h3>
+        <h3><?= strtoupper(get_the_title()); ?></h3>
         <section class="left-right" id="left-right">
-            <button type="button"><</button>
+            <button type="button"><i class="fa-solid fa-circle-chevron-left"></i></button>
             <h1 id="sessions">SESSION 1</h1>
-            <button type="button">></button>
+            <button type="button"><i class="fa-solid fa-circle-chevron-right"></i></button>
         </section>
             <section id="listeSession">
                 <!--Prend le template et donne comme valeur à la variable data la session-->

@@ -3,7 +3,7 @@
 ?>
     <main class="site_main_prof_page">
          <section class="left-right">
-            <button type="button"><</button>
+            <button type="button"><i class="fa-solid fa-circle-chevron-left"></i></button>
             <?php 
                 $catPost = get_posts(array('category_name' => 'enseignants', "numberposts" => 14));
                 foreach ($catPost as $post) : setup_postdata($post); 
@@ -12,7 +12,7 @@
                 <?php the_post_thumbnail(); ?>
             </section>
             <?php endforeach;?>
-            <button type="button">></button>
+            <button type="button"><i class="fa-solid fa-circle-chevron-right"></i></button>
         </section>
         <section id="right">
             <section id="listeProfs">
