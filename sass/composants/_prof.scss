@@ -1,4 +1,12 @@
 .site_main_prof_page{
+
+    display: flex;
+
+    
+
+    
+   
+
     h3{
         color: $color__actif;
         margin: 80px 0 0 0;
@@ -17,6 +25,9 @@
     }
     .imgProf{
         display: flex;
+        position:relative;
+
+        
     }
     .titreProf {
         display: flex;
@@ -24,6 +35,10 @@
         justify-content: center;
         align-items: center;
 
+    }
+
+    h3{
+      
     }
 
     .contenuProf{
@@ -77,8 +92,14 @@
 
         .contenuProf{
             width: auto;
+            height: 90%;
             img{
-                width: auto;
+
+                position: relative;
+                // width: auto;
+               
+                
+                
             }
         }
     }
@@ -117,16 +138,36 @@
         .contenuProf{
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             background-color: rgb(107, 107, 107);
             border-radius: 0% 13px 13px 13px;
             width: 100%;
     
             img{
-                width: 100%;
+
+                position: relative;
+
+                left:0;
+                height:auto;
+                width: 40%;
                 border-radius: 0% 13px 13px 13px;
+
+                margin: 10px;
+
+                align-self: flex-start;
+
+               
+
+               
             }
+
+            
+        }
+
+        .enseignants ­> p {
+            display: flex;
+            flex-flow: column nowrap;
         }
     }
     

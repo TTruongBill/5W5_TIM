@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
 theme name: 5W5_TIM
 Author: Truong Tien Tien Bill
@@ -89,13 +90,11 @@ a {
    * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
    */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  /* 2 */
+
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+
 }
 
 /**
@@ -850,6 +849,9 @@ textarea {
   margin: 80px 0 0 0;
 }
 
+.site_main_prof_page {
+  display: flex;
+}
 .site_main_prof_page h3 {
   color: #4848f1;
   margin: 80px 0 0 0;
@@ -888,6 +890,7 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .site_main_prof_page .titreProf {
@@ -985,9 +988,10 @@ textarea {
   }
   .site_main_prof_page .contenuProf {
     width: auto;
+    height: 90%;
   }
   .site_main_prof_page .contenuProf img {
-    width: auto;
+    position: relative;
   }
   #right {
     width: 90vw;
@@ -1049,23 +1053,26 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #6b6b6b;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(107, 107, 107);
+
     border-radius: 0% 13px 13px 13px;
     width: 100%;
   }
   .enseignants .contenuProf img {
-    width: 100%;
+    position: relative;
+    left: 0;
+    height: auto;
+    width: 40%;
     border-radius: 0% 13px 13px 13px;
+    margin: 10px;
+    align-self: flex-start;
+  }
+  .enseignants .enseignants ­ > p {
+    display: flex;
+    flex-flow: column nowrap;
   }
 }
 
