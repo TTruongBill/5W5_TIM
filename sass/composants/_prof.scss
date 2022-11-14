@@ -1,47 +1,44 @@
-.site_main_prof_page{
-
+.site_main_prof_page {
     display: flex;
 
-    
-
-    
-   
-
-    h3{
+    h3 {
         color: $color__actif;
-        margin: 80px 0 0 0;
+        margin: 50px 0 5px 0;
+        letter-spacing: 12px;
+        font-size: 1.5rem;
     }
+
     #right {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    #listeProfs{
+
+    #listeProfs {
         display: flex;
         flex-direction: row;
         position: relative;
         transition: all 0.5s;
     }
-    .imgProf{
+
+    .imgProf {
         display: flex;
         position:relative;
-
-        
     }
+
     .titreProf {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
 
     h3{
       
     }
 
-    .contenuProf{
+    .contenuProf {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -49,78 +46,83 @@
         width: 100vw;
         background-color: rgb(107, 107, 107);
 
-        img{
+        img {
             width: 100vw;
         }
     }
-    .enseignants{
+
+    .enseignants {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
         margin: 10px;
     }
     
-    .left-right{
+    .left-right {
         order: 2;
     }
 }
-@media only screen and (min-width: 600px){
+
+@media only screen and (min-width: 600px) {
+    
     .site_main_prof_page {
         flex-direction: row;
         justify-content: start;
         width: 100%;
 
-        .left-right{
+        .left-right {
             order: 0;
             flex-direction: column;
             padding: 0 25px 0 43px;
-            background-color: rgba(31, 31, 31, 0.798);
-            margin-right: 40px;
-            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 0 40px 0 0;
 
-            button:nth-of-type(1){
+            button:nth-of-type(1) {
                 transform: rotateZ(90deg);
             }
-            button:nth-of-type(2){
+
+            button:nth-of-type(2) {
                 transform: rotateZ(90deg);
             }
-            img{
+            
+            img {
                 width: 10vw;
             }
         }
 
-        .contenuProf{
+        .contenuProf {
             width: auto;
             height: 90%;
-            img{
+            
+            img {
 
                 position: relative;
-                // width: auto;
-               
-                
-                
+                // width: auto; 
             }
         }
     }
-    #right{
+    
+    #right {
         width: 90vw;
 
-        #listeProfs{
+        #listeProfs {
             width: 100%;
         }
     }
-    #bodyProf{
+
+    #bodyProf {
         display: flex;
         flex-direction: row;
     }
-    #imgProf{
+
+    #imgProf {
         display: flex;
         flex-direction: column;
         background-color: rgba(101, 101, 101, 0.66);
         height: 100vh;
     }
-    .enseignants{
+
+    .enseignants {
         margin: 20px;
         border-radius: 0% 13px 13px 13px;
         display: flex;
@@ -133,9 +135,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-    
         }
-        .contenuProf{
+
+        .contenuProf {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -144,25 +146,15 @@
             border-radius: 0% 13px 13px 13px;
             width: 100%;
     
-            img{
-
+            img {
                 position: relative;
-
                 left:0;
                 height:auto;
                 width: 40%;
                 border-radius: 0% 13px 13px 13px;
-
                 margin: 10px;
-
                 align-self: flex-start;
-
-               
-
-               
             }
-
-            
         }
 
         .enseignants ­> p {
