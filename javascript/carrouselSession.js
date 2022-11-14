@@ -79,10 +79,10 @@ function ouvrirCoursButton(){
                 fermerCoursAuto(coursSession[j], fermerCours[j], ouvrirCours[j], content_trim[j], content_total[j]);
             }
             
-            fermerCours[i].style.display = "block";
+            fermerCours[i].style.display = "flex";
             ouvrirCours[i].style.display = "none";
             content_trim[i].style.display = "none";
-            content_total[i].style.display = "block";
+            content_total[i].style.display = "flex";
             chiffreCours = i;
             coursSession[i].setAttribute("data-order", 1);
        
@@ -108,7 +108,7 @@ function fermerCoursAuto(cours, fermer, ouvrir, contentTrim, contentTotal){
     cours.classList.remove("lirePlusCours");
     fermer.style.display = "none";
     ouvrir.style.display = "block";
-    contentTrim.style.display = "block";
+    contentTrim.style.display = "flex";
     contentTotal.style.display = "none";
 
 }

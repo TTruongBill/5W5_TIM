@@ -12,7 +12,7 @@ enleverProf();//Enlever tous les profs
 //Si on est en format desktop
 if (tailleDesktop.matches) {
     nbProf = nbRandom; //Afficher un prof aléatoire
-    imgCarrousel.style.display = "flex";
+    
 } else{//Sinon
     enseignants[nbProf + 1].style.display = "flex"; //Mettre le prof suivant en display flex
     listeEnseignant.classList.add("rajoutLeft");//Rajouter la classe qui permet de déplacer les enseignants vers la droite
@@ -90,64 +90,67 @@ arrows[1].addEventListener("click", () => {
     enableDisableArrows();//désactiver ou activer la flèche de droite
 })
 
-//Fonction qui permet d'activer ou désactiver les boutons pour changer de profs
-function enableDisableArrows(){
-    //Si nbProf est égal à 1, la flèche de gauche est désactivé
-    //Sinon si nbprof est en haut de 0 et en bas de 13, activer les 2 flèches
-    //sinon si nbProf est égal à 13, la flèche de droite est désactivé
-    if(nbProf == 0){
-        arrows[0].disabled = true;
-    } else if(nbProf == 13){
-        arrows[1].disabled = true;
-    }else{
-        arrows[0].disabled = false;
-        arrows[1].disabled = false;
-    }
-}
+*/
 
-//Fonction qui permet d'enlever l'affichage de tous les profs
-function enleverProf(){
-    //Si nbProf est en haut de 0 et en bas de 14
-    //rajouter un display none à tous les éléments du array de profs
-    if(nbProf => 0 && nbProf < 14){
-        for(let i = 0; i < enseignants.length; i++){
-            enseignants[i].style.display= "none";
-        }
-    } 
-}*/
 let arrows = document.querySelectorAll(".left-right button");//var contenant les flèches gauche droite des carrousels
 let enseignants = document.getElementsByClassName("enseignants");//var contenant la liste des enseignants(un par un) - 14 objets(profs)
 let nbRandom = Math.floor(Math.random() * 14);//nombre aléatoire pour générer un prof différent à chaque refresh(pour format desktop)
 let counter = document.getElementById("counter");//Var contenant le compteur du nombre de prof
+let imgCarrousel = document.getElementsByClassName("imgProf");//var contenant la liste des images des enseignants(un par un) - 14 objets(images)
 
 let nbProf = nbRandom;//nb pour incrémenter le prof dans lequel on est rendu
 //***************Initialisation de la page **********************
 enleverProf();//Enlever tous les profs
 
+imgCarrousel[nbProf].style.display = "flex";
+imgCarrousel[nbProf + 1].style.display = "flex";
+imgCarrousel[nbProf - 1].style.display = "flex";
+
 enseignants[nbProf].style.display = "flex";//Afficher le prof selon le prof choisi
 counter.innerHTML = nbProf + 1 + "/" + enseignants.length;//Écrire dans le compteur le prof auquel on est rendu et le nombre de prof total
 
 //Lorsque la flèche de gauche est clicker,
-arrows[0].addEventListener("click", () => {
+arrows[0].addEventListener("mousedown", () => {
     enleverProf();//enlever tous les profs
-    if(nbProf > 0 && nbProf <= 14){//si nbProf est plus grand que 0 et plus petut ou egal à 14
+    if(nbProf > 0 && nbProf != 13){//si nbProf est plus grand que 0 et plus petut ou egal à 14
+        imgCarrousel[nbProf].style.display = "flex";
         nbProf--;//Décrémenter
+        imgCarrousel[nbProf].style.display = "flex";
+        imgCarrousel[nbProf - 1].style.display = "flex";
+
+
     }else if(nbProf == 0){//sinon si nbProf est égal à 0
+        imgCarrousel[nbProf].style.display = "flex";
+        imgCarrousel[nbProf].style.order = "-1";
         nbProf = 13;//mettre nbProf à 13
+        imgCarrousel[nbProf].style.display = "flex";
+        imgCarrousel[nbProf - 1].style.display = "flex";
+    }else if(nbProf == 13){//si nbProf est égal à 13, afficher le prof suivant
+        enseignants[nbProf + 1].style.display = "flex";
+        listeEnseignant.classList.add("rajoutLeft");//Rajouter la classe qui déplace le carrousel de prof à partir de la gauche
     }
+   
     enseignants[nbProf].style.display = "flex";//mettre en flex le display du prof actuel
 
     counter.innerHTML = nbProf + 1 + "/" + enseignants.length;//Écrire dans le compteur le prof auquel on est rendu et le nombre de prof total
 })
 //Lorsque la flèche de droite est clicker,
-arrows[1].addEventListener("click", () => {
+arrows[1].addEventListener("mousedown", () => {
     enleverProf();//enlever tous les profs
 
-    if(nbProf >= 0 && nbProf < 13 ) {//si nbProf est plus grand ou egal que 0 et plus petit que 13
+    if(nbProf > 0 && nbProf < 12 ) {//si nbProf est plus grand ou egal que 0 et plus petit que 13
+        imgCarrousel[nbProf].style.display = "flex";
         nbProf++;//Incrémenter
-    }else if(nbProf == 13){//sinon si nbProf est égal à 13
+        imgCarrousel[nbProf].style.display = "flex";
+        imgCarrousel[nbProf + 1].style.display = "flex";
+
+    }else if(nbProf == 12){//sinon si nbProf est égal à 13
+        imgCarrousel[nbProf].style.display = "flex";
         nbProf = 0;//mettre nbProf à 0
+        imgCarrousel[nbProf].style.display = "flex";
+        imgCarrousel[nbProf + 1].style.display = "flex";
     }
+
     enseignants[nbProf].style.display = "flex"; //mettre en flex le display du prof actuel
     counter.innerHTML = nbProf + 1 + "/" + enseignants.length;//Écrire dans le compteur le prof auquel on est rendu et le nombre de prof total
 })
@@ -156,9 +159,10 @@ arrows[1].addEventListener("click", () => {
 function enleverProf(){
     //Si nbProf est en haut de 0 et en bas de 14
     //rajouter un display none à tous les éléments du array de profs
-    if(nbProf => 0 && nbProf < 14){
+    if(nbProf => 0 && nbProf < 13){
         for(let i = 0; i < enseignants.length; i++){
             enseignants[i].style.display= "none";
+            imgCarrousel[i].style.display = "none";
         }
     } 
 }
