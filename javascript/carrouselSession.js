@@ -16,28 +16,48 @@ ouvrirCoursButton();
 sessionsListe[0].style.display = "flex";
 enableDisableArrows();//désactiver la flèche de gauche
 
+for(let i =0; i < sessionsListe.length; i++){
+    sessionsListe[i].classList.add("transparence");
+}
+sessionsListe[0].classList.remove("transparence");
+
 //Lorsque la flèche de gauche est clicker,
 arrows[0].addEventListener("mousedown", () => {
     //Si nbSession est en haut de 0 
     if(nbSession > 0){
-        sessionsListe[nbSession].style.display = "none";//rajouter un display none sur la session actuelle
+        ajoutTransparence();
         nbSession--;//décrémenter
-        titreSession.innerHTML = "SESSION " + (nbSession + 1);//changer le titre pour la prochaine session
-        sessionsListe[nbSession].style.display = "flex";
+
+        setTimeout(() => {
+            sessionsListe[nbSession + 1].style.display = "none";//rajouter un display none sur la session actuelle
+            titreSession.innerHTML = "SESSION " + (nbSession + 1);//changer le titre pour la prochaine session
+            sessionsListe[nbSession].style.display = "flex";        
+        }, 300);
     }
+    
+    setTimeout(retireTransparenceTitre, 300);
+    setTimeout(retireTransparenceSession, 500);
+
     ouvrirCoursButton();
     enableDisableArrows();
 })
 //Lorsque la flèche de droite est clicker,
 arrows[1].addEventListener("mousedown", () => {
-   
     //Si nbSession est en bas de 5
     if(nbSession < 5){
-        sessionsListe[nbSession].style.display = "none";//rajouter un display none sur la session actuelle
-        nbSession++;//incrémenter
-        titreSession.innerHTML = "SESSION " + (nbSession + 1);//changer le titre pour la prochaine session
-        sessionsListe[nbSession].style.display = "flex";
+        ajoutTransparence();
+        nbSession++;//incrémenter  
+
+        setTimeout(() => {
+            sessionsListe[nbSession - 1].style.display = "none";//rajouter un display none sur la session actuelle 
+            titreSession.innerHTML = "SESSION " + (nbSession + 1);//changer le titre pour la prochaine session
+            sessionsListe[nbSession].style.display = "flex";    
+        }, 300);  
     }
+        
+    setTimeout(retireTransparenceTitre, 300);
+    setTimeout(retireTransparenceSession, 500);
+
     ouvrirCoursButton();
     enableDisableArrows();
 })
@@ -111,4 +131,17 @@ function fermerCoursAuto(cours, fermer, ouvrir, contentTrim, contentTotal){
     contentTrim.style.display = "block";
     contentTotal.style.display = "none";
 
+}
+
+function ajoutTransparence() {
+    titreSession.classList.add("transparence");
+    sessionsListe[nbSession].classList.add("transparence");
+}
+
+function retireTransparenceTitre() {
+    titreSession.classList.remove("transparence");
+}
+
+function retireTransparenceSession() {
+    sessionsListe[nbSession].classList.remove("transparence");
 }
