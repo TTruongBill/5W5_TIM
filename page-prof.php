@@ -27,7 +27,9 @@
                     </section>
                     <section class="contenuProf">
                         <?php the_post_thumbnail(); ?>
-                        <?php the_excerpt();?>
+                        <div class="elmsProf">
+                        <?php the_content();?>
+                        </div>
                     </section>
                 </section>
                 <?php endforeach;?>
