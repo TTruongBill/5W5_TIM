@@ -719,14 +719,31 @@ textarea {
 }
 
 .left-right button {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: normal;
-  background-color: #383838;
-  color: #191919;
+  background-color: transparent;
   width: 30px;
   height: 30px;
   border: none;
   border-radius: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #4D4D4D;
+  font-size: 2em;
+  /* .fa-solid {
+            color: #4D4D4D;
+            font-size: 2em;
+
+            &:hover {
+                color: $color__actif;
+            }
+        } */
   /*&:active{
 
         }*/
@@ -734,13 +751,13 @@ textarea {
 
 .left-right button:disabled {
   cursor: default;
-  color: #191919;
   opacity: 0.4;
 }
 
 .left-right button:hover:enabled {
-  background-color: #909090;
+  background-color: transparent;
   cursor: pointer;
+  color: #4848f1;
 }
 
 .session {

@@ -26,25 +26,37 @@
     }
 
     button {
-        text-align: center;
+        display: flex;
         font-weight: normal;
-        background-color: #383838;
-        color: $color__background-body;
+        background-color: transparent;
         width: 30px;
         height: 30px;
         border: none;
         border-radius: 100%;
+        justify-content: center;
+        align-items: center;
+        color: #4D4D4D;
+        font-size: 2em;
         
         &:disabled {
             cursor: default;
-            color: $color__background-body;
             opacity: 0.4;
         }
 
         &:hover:enabled {
-            background-color: rgb(144, 144, 144);
+            background-color: transparent;
             cursor: pointer;
+            color: $color__actif;
         }
+
+        /* .fa-solid {
+            color: #4D4D4D;
+            font-size: 2em;
+
+            &:hover {
+                color: $color__actif;
+            }
+        } */
 
         /*&:active{
 
