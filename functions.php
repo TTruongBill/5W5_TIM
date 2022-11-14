@@ -66,13 +66,6 @@ function cidw_5W5_enqueue(){
      filemtime(get_template_directory() . '/javascript/carrouselSession.js'),
      true);
 
-    //Javascript lirePLusCours
-    wp_register_script('lirePLusCours',
-    get_template_directory_uri() . '/javascript/carrouselSession.js',
-    array(),
-    filemtime(get_template_directory() . '/javascript/carrouselSession.js'),
-    true);
-     
      //Javascript carrouselProf
      wp_register_script('CarrouselProf',
      get_template_directory_uri() . '/javascript/carrouselProf.js',
@@ -103,7 +96,6 @@ function cidw_5W5_enqueue(){
     //Si c'est la page cours, activer le script de carrousel cours
     if(is_page("cours")){
         wp_enqueue_script("CarrouselCours");
-        wp_enqueue_script("lirePLusCours");
     }
 
     //Si c'est la page prof, activer le script de carrouselvprofs
