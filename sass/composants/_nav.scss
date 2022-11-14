@@ -69,7 +69,8 @@
 
 .navCouleur{
     a{
-        color: $color__actif;
+        font-weight: bold;
+        color: $color__link-on;
     }
 }
 
