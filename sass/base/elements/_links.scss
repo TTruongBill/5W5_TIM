@@ -6,9 +6,12 @@ a {
 	}
 
 	&:hover,
-	&:focus,
-	&:active {
+	&:focus {
 		color: $color__link-hover;
+	}
+
+	&:active {
+		color: $color__link;
 	}
 
 	&:focus {
