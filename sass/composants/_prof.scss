@@ -1,5 +1,10 @@
-.site_main_prof_page {
+.site_main_prof_page .site_main_proj_page{
     display: flex;
+
+    .elmsProf {
+        display:flex;
+        flex-flow: column nowrap;
+    }
 
     h3 {
         color: $color__actif;
@@ -34,9 +39,7 @@
         align-items: center;
     }
 
-    h3{
-      
-    }
+  
 
     .contenuProf {
         display: flex;
