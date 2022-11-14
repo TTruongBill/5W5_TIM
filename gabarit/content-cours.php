@@ -5,7 +5,7 @@
     $content = get_the_content();  //Mettre le contenu dans une variable
 ?> 
     <section class='cours'> 
-        <p class="cours_fermer">X</p>
+        <i class="cours_fermer fa-solid fa-circle-xmark"></i>
         <section>
             <h1><?php the_title(); ?></h1>
             <p>icone</p>
