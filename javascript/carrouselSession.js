@@ -105,11 +105,13 @@ function ouvrirCoursButton(){
             content_total[i].style.display = "flex";
             chiffreCours = i;
             coursSession[i].setAttribute("data-order", 1);
+            coursSession[i].classList.add("widthCoursOuvert");
        
             
             
             for(let j = chiffreCours - 1; j >= 0;j--){
                 coursSession[j].setAttribute("data-order", j + 2); 
+                
             }
             for(let j = chiffreCours + 1; j < coursSession.length; j++){
                 coursSession[j].setAttribute("data-order", j + 1);
@@ -130,7 +132,7 @@ function fermerCoursAuto(cours, fermer, ouvrir, contentTrim, contentTotal){
     ouvrir.style.display = "block";
     contentTrim.style.display = "flex";
     contentTotal.style.display = "none";
-
+    cours.classList.remove("widthCoursOuvert");
 }
 
 function ajoutTransparence() {

@@ -79,7 +79,7 @@
     border-radius: 0% 13px 13px 13px;
     display: flex;
     flex-direction: column;
-    width: 92%;
+    //width: 92%;
     justify-content: center;
 
     h1 {
@@ -118,6 +118,11 @@
                 cursor: pointer;
             }
         }
+    }
+
+    img {
+        height: 30px;
+        width: auto;
     }
 
     section {
