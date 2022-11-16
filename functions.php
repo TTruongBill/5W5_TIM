@@ -72,6 +72,13 @@ function cidw_5W5_enqueue(){
      array(),
      filemtime(get_template_directory() . '/javascript/carrouselProf.js'),
      true);
+
+     //Javascript carrouselProj
+     wp_register_script('CarrouselProj',
+     get_template_directory_uri() . '/javascript/carrouselProj.js',
+     array(),
+     filemtime(get_template_directory() . '/javascript/carrouselProj.js'),
+     true);
  
     //Javascript menuBurger
     wp_register_script('Burger',
@@ -101,6 +108,11 @@ function cidw_5W5_enqueue(){
     //Si c'est la page prof, activer le script de carrouselvprofs
     if(is_page("prof")){
         wp_enqueue_script("CarrouselProf");
+    }
+
+    //Si c'est la page prof, activer le script de carrouselvprofs
+    if(is_page("projet-etudiant")){
+        wp_enqueue_script("CarrouselProj");
     }
 
     //Si c'est la page accueil, activer le script carrousel(pas certain de garder ce script)
