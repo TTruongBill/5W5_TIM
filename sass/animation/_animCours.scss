@@ -1,12 +1,21 @@
 .site_main_cours_page{
    
     .lirePlusCours {
-        width: 92%;
+        //width: 92%;
 
         &:hover {
             scale: 1;
         }
     } 
+
+    .transparence {
+        opacity: 0%;
+    }
+    
+    .widthCoursOuvert {
+        animation: animCoursOuvert 1s forwards;
+        transition-timing-function: cubic-bezier(.78,0,.25,1.48);
+    }
 
     .animCarrouselCours {
         animation-name: animCarrouselCours();
@@ -49,8 +58,26 @@ button{
     }
 }
 
-.transparence {
-    opacity: 0%;
+.cours[data-order="1"]{
+    position: relative;
+
+    top: 0;
+    left: 0;
+}
+.cours[data-order="2"]{
+    position: relative;
+    top: 0;
+    right: 0;
+}
+.cours[data-order="3"]{
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+.cours[data-order="4"]{
+    position: relative;
+    bottom: 0;
+    left: 0;
 }
 
 @keyframes animCarrouselCours {
@@ -60,5 +87,18 @@ button{
 
     to {
         scale: 1;
+    }
+}
+
+@keyframes animCoursOuvert {
+    from {
+        order: -1;
+    }
+    10% {
+        width: 45%;
+    }
+    100% {
+       width: 93%;
+       order: -1;
     }
 }
