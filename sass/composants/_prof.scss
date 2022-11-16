@@ -1,4 +1,4 @@
-.site_main_prof_page .site_main_proj_page{
+.site_main_prof_page {
     display: flex;
 
     .elmsProf {
@@ -131,7 +131,7 @@
         margin: 20px;
         border-radius: 0% 13px 13px 13px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 92%;
         justify-content: center;
 
