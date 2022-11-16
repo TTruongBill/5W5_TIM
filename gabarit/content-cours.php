@@ -8,7 +8,7 @@
         <i class="cours_fermer fa-solid fa-circle-xmark"></i>
         <section>
             <h1><?php the_title(); ?></h1>
-            <p>icone</p>
+            <p><?php the_post_thumbnail();?></p>
         </section>
         <p class="content_trim"><?php echo wp_trim_words($content, 30, "...<button class='cours_ouvrir'> Lire la suite </button>");//Montrer la variable et rajouter un bouton qui va permettre de montrer plus de contenu(dans le futur) ?></p>
         <div class="content_total"><?php echo $content; ?></div>
