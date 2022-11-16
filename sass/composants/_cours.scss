@@ -68,6 +68,7 @@
     display: none;
     flex-direction: column;
     justify-content: center;
+    margin: 0 2%;
 }
 
 .cours {
@@ -78,6 +79,7 @@
     flex-direction: column;
     width: 92%;
     justify-content: center;
+    padding: 30px 0 30px 0;
 
     h1 {
         font-size: 18px;
@@ -85,7 +87,7 @@
         font-weight: bold;
 
         margin: 0 0 15px 0;
-        line-height: 1.2rem;
+        line-height: 1.5rem;
     }
 
     &_fermer {
@@ -120,7 +122,7 @@
     section {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         margin: 0 30px;
     }
 }
@@ -138,8 +140,7 @@
 
 /**************/
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////// MEDIA SCREEN POUR LE MENU BURGER ////////////////////////////////////////////
 @media only screen and (min-width: 600px) and (max-width: 720px) {
     .site_main_cours_page {
 
@@ -157,9 +158,9 @@
         }  
     }
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+//////////////////////////////////////////// ÉCRAN MOYEN ////////////////////////////////////////////
 @media only screen and (min-width: 600px) and (max-width: 820px) {
     .session {
         flex-direction: row;
@@ -200,23 +201,26 @@
     }   
 }
 
-@media only screen and (min-width: 820px) {
+//////////////////////////////////////////// GRAND ÉCRAN ////////////////////////////////////////////
+@media only screen and (min-width: 820px) and (max-width: 1920px) {
     .session {
         flex-direction: row;
         flex-wrap: wrap;
+        margin: 0 5%;
     }
 
     .site_main_cours_page {
 
         h3 {
             color: $color__actif;
-            margin: 50px 0 5px 0;
+            margin: 55px 0 5px 0;
             letter-spacing: 12px;
             font-size: 1.5rem;
         }  
     }
 
     .left-right {
+        margin: 0 0 45px 0;
 
         h1 {
             font-size: 2.5rem;
@@ -232,6 +236,69 @@
         h1 {
             font-size: 20px;
             line-height: 1.5rem;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 2rem;
+
+            button {
+                font-size: 1rem;
+            }
+        }
+
+        .content_total {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cours_fermer {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 2rem;
+            margin: 0 30px 30px 0;
+        }
+    }
+}
+
+//////////////////////////////////////////// TRÈS GRAND ÉCRAN ////////////////////////////////////////////
+@media only screen and (min-width: 1920px) {
+    .session {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 5%;
+        padding-left: 5%;
+        justify-content: flex-start;
+    }
+
+    .site_main_cours_page {
+
+        h3 {
+            color: $color__actif;
+            margin: 75px 0 5px 0;
+            letter-spacing: 12px;
+            font-size: 1.7rem;
+        }  
+    }
+
+    .left-right {
+        margin: 0 0 65px 0;
+
+        h1 {
+            font-size: 3rem;
+            margin: 0 15px;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+    }
+
+    .cours {
+        width: 45%;
+        margin: 20px;
+        
+        h1 {
+            font-size: 25px;
+            line-height: 2rem;
         }
 
         p {
