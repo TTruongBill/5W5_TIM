@@ -28,5 +28,10 @@
                 </div>
             </section>
         </section>
+        <div class="bottom_curve">
+            <svg viewBox="0 0 800 600" preserveAspectRatio="none" style="width : calc(100% + 1.3px); height : 600px;">
+                <path d="M -1 500 C 139 610 223 631 477 504 C 594 435 732 448 800 488 L 800 600 L -1 600" style="width : 100vw;" class="shape-fill"></path>
+            </svg>
+        </div>
     </main>
 <?php get_footer(); ?>

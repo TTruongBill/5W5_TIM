@@ -9,7 +9,25 @@
         font-size: 1.2rem;
     }  
 }
+.bottom_curve {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
 
+.bottom_curve svg {
+    position: relative;
+    display: block;
+    width: calc(180% + 1.3px);
+    height: 182px;
+}
+
+.bottom_curve .shape-fill {
+    fill: #B5ACFF;
+}
 .left-right {
 
     display: flex;
