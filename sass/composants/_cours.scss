@@ -1,6 +1,7 @@
 .site_main_cours_page {
 
     margin-bottom: 35px;
+    z-index: 0;
 
     h3 {
         color: $color__actif;
@@ -8,6 +9,40 @@
         letter-spacing: 10px;
         font-size: 1.2rem;
     }  
+    .bottom_curve {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        z-index: -1;
+    }
+    
+    .bottom_curve svg {
+        position: relative;
+        display: block;
+        width: calc(180% + 1.3px);
+        height: 182px;
+    }
+    
+    .top_curve {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        z-index: -1;
+    }
+    
+    .top_curve svg {
+        position: relative;
+        display: block;
+        width: calc(180% + 1.3px);
+        height: 182px;
+    }
+    
 }
 
 .left-right {
