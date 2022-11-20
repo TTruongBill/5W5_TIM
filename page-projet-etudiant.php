@@ -36,5 +36,29 @@
             </section>
             <p id="counter"></p>
         </section>
+        <div class="top_curve">
+            <svg viewBox="0 0 800 600" preserveAspectRatio="none" style="width : calc(100% + 1.3px); height : 600px;">
+                <defs>
+                    <linearGradient id="topGradient">
+                        <stop offset="0%" stop-color="#3800B7" />
+                        <stop offset="10%" stop-color="#4E00B7" />
+                        <stop offset="50%" stop-color="#7D00B7" />
+                    </linearGradient>
+                </defs>
+                <path d="M 0 1 C 10 214 93 260 214 157 C 317 94 444 39 596 -1 L 799 0 L 401 0" style="width : 100vw;" fill="url('#topGradient')"></path>
+            </svg>
+        </div>
+        <div class="bottom_curve">
+            <svg viewBox="0 0 800 600" preserveAspectRatio="none" style="width : calc(100% + 1.3px); height : 600px;">
+                <defs>
+                    <linearGradient id="bottomGradient">
+                    <stop offset="0%" stop-color="#7D00B7" />
+                        <stop offset="70%" stop-color="#4E00B7" />
+                        <stop offset="100%" stop-color="#3800B7" />
+                    </linearGradient>
+                </defs>
+                <path d="M 0 537 C 36 420 190 394 282 389 C 420 396 658 474 799 596  L 674 600 L 0 600" style="width : 100vw;" fill="url('#bottomGradient')"></path>
+            </svg>
+        </div>
     </main>
 <?php get_footer(); ?>
