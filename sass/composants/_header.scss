@@ -1,5 +1,5 @@
 .site_header{
-    background-color: $color__background-header;
+    background-color: $color__background-header_mobile;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -7,8 +7,13 @@
 }
 
 .site_header_title{
-    background-color: $color__background-header;
+    background-color: $color__background-header_mobile;
     width: 100%;
+
+    img {
+        width: 94px;
+        height: 40px;
+    }
 }
 
 .site_header h1{
@@ -21,3 +26,11 @@
     flex-direction: row;
 }
 
+@media only screen and (min-width: 720px) {
+    .site_header{
+        background-color: $color__background-header;
+        &_title{
+            background-color: $color__background-header;
+        }
+    }
+}
