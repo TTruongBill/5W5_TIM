@@ -99,13 +99,14 @@ function ouvrirCoursButton(){
                 fermerCoursAuto(coursSession[j], fermerCours[j], ouvrirCours[j], content_trim[j], content_total[j]);
             }
             
+            coursSession[i].classList.add("widthCoursOuvert");
             fermerCours[i].style.display = "flex";
             ouvrirCours[i].style.display = "none";
             content_trim[i].style.display = "none";
             content_total[i].style.display = "flex";
             chiffreCours = i;
             coursSession[i].setAttribute("data-order", 1);
-            coursSession[i].classList.add("widthCoursOuvert");
+
        
             
             
