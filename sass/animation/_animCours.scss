@@ -11,10 +11,11 @@
     .transparence {
         opacity: 0%;
     }
-    
+
     .widthCoursOuvert {
-        animation: animCoursOuvert 1s forwards;
+        animation: animCoursOuvert 3s forwards;
         transition-timing-function: cubic-bezier(.78,0,.25,1.48);
+        order: -1;
     }
 
     .animCarrouselCours {
@@ -92,13 +93,26 @@ button{
 
 @keyframes animCoursOuvert {
     from {
-        order: -1;
+
     }
-    10% {
-        width: 45%;
+    15% {
+        opacity: 0;
+        visibility: hidden;
+        width: 93%;
+    }
+    30% {
+
+    }
+    45% {
+
+    }
+    75% {
+
     }
     100% {
-       width: 93%;
-       order: -1;
+        opacity: 100%;
+        visibility: visible;
+        order: -1;
+        width: 93%;
     }
 }
