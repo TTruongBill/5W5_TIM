@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    justify-content: space-between;
     
     main {
         background-color: $color__background-body;
@@ -17,5 +18,6 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 300%;
     }
 }

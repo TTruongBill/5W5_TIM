@@ -15,12 +15,12 @@
                                 "container"=>"nav",
                                 "container_class"=>"navDesktopListe")); 
         ?>
-        <h1>TIM</h1>
+        <?php the_custom_logo();?>
         </nav>
    
         <nav class="navMobile">
             <section>
-                <h1>TIM</h1>
+                <?php the_custom_logo();?>
                 <label for="menuNavMobile">
                         <svg class="menuBurger" viewBox="0 0 100 80" width="40" height="40">
                         <rect id="line1" x="10" width="80" height="10" rx="7"></rect>

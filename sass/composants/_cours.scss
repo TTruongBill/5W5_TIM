@@ -4,11 +4,12 @@
     z-index: 0;
 
     h3 {
-        color: $color__actif;
+        color: rgb(72, 72, 241);
         margin: 100px 0 3px 0;
         letter-spacing: 10px;
         font-size: 1.2rem;
-    }  
+    }
+
     .bottom_curve {
         position: fixed;
         bottom: 0;
@@ -127,11 +128,6 @@
         margin: 0 0 15px 0;
         line-height: 1.5rem;
     }
-
-    &_fermer {
-        align-items: flex-end;
-
-    }
    
     p {
         font-size: 15px;
@@ -168,12 +164,19 @@
         justify-content: flex-start;
         margin: 0 30px;
     }
+
+    &_fermer {
+        display: flex;
+        font-size: 1.7rem;
+        margin: 0 30px 0 0;
+        justify-content: flex-end;
+    }
 }
 
 .cours_ouvrir {
     border: none;
     border-radius: 50px;
-    background-color: $color__actif;
+    background-color: rgb(72, 72, 241);
     color: $color__text-main;
     width: 125px;
     font-weight: bold;
@@ -208,6 +211,9 @@
     .session {
         flex-direction: row;
         flex-wrap: wrap;
+        margin: 0 5%;
+        padding-left: 5%;
+        justify-content: flex-start;
     }
 
     .site_main_cours_page {
@@ -241,6 +247,10 @@
                 font-size: 15px;
             }
         }
+        
+        &_fermer {
+            font-size: 2rem;
+        }
     }   
 }
 
@@ -250,6 +260,8 @@
         flex-direction: row;
         flex-wrap: wrap;
         margin: 0 5%;
+        padding-left: 5%;
+        justify-content: flex-start;
     }
 
     .site_main_cours_page {
@@ -295,11 +307,8 @@
             flex-direction: column;
         }
 
-        .cours_fermer {
-            display: flex;
-            justify-content: flex-end;
+        &_fermer {
             font-size: 2rem;
-            margin: 0 30px 30px 0;
         }
     }
 }
@@ -351,6 +360,10 @@
             button {
                 font-size: 1rem;
             }
+        }
+
+        &_fermer {
+            font-size: 2rem;
         }
     }
 }

@@ -42,9 +42,9 @@
 
     h3 {
         color: $color__actif;
-        margin: 50px 0 5px 0;
-        letter-spacing: 12px;
-        font-size: 1.5rem;
+        margin: 100px 0 3px 0;
+        letter-spacing: 10px;
+        font-size: 1.2rem;
     }
 
     #right {
@@ -64,6 +64,8 @@
     .imgProf {
         display: flex;
         position:relative;
+        width: 30vw;
+        height: auto;
     }
 
     .titreProf {
@@ -81,7 +83,7 @@
         justify-content: center;
         align-items: center;
         width: 100vw;
-        background-color: rgb(107, 107, 107);
+        background-color: rgba(48, 48, 48, 0.75);
 
         img {
             width: 100vw;
@@ -97,12 +99,37 @@
     
     .left-right {
         order: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin: 0;
+        padding: 20px 0;
+
+        .imgProf {
+            margin: 8px;
+            
+            img {
+                border-radius: 0px 13px 13px 13px;
+                width: 25vw;
+            }
+        }
+
+        button {
+            font-size: 2.5rem;
+        button:nth-of-type(1) {
+            order: -2;
+        }
+        button:nth-of-type(2) {
+            order: 2;
+        }
     }
 }
 
 @media only screen and (min-width: 600px) {
     
     .site_main_prof_page {
+
         flex-direction: row;
         justify-content: start;
         width: 100%;
@@ -110,18 +137,16 @@
         .left-right {
             order: 0;
             flex-direction: column;
-            padding: 0 25px 0 43px;
+            padding: 0 40px 0 40px;
             background-color: rgba(0, 0, 0, 0.5);
             margin: 0 40px 0 0;
 
             button:nth-of-type(1) {
-                order: -2;
                 transform: rotateZ(90deg);
             }
 
             button:nth-of-type(2) {
                 transform: rotateZ(90deg);
-                order: 2;
             }
             
             img {
@@ -178,7 +203,7 @@
 
         .contenuProf {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: flex-start;
             align-items: center;
             background-color: rgb(107, 107, 107);
@@ -194,6 +219,11 @@
                 margin: 10px;
                 align-self: flex-start;
             }
+
+            .containerProf{
+                display: flex;
+                flex-direction: row;
+            }
         }
 
         .enseignants ­> p {
@@ -202,5 +232,63 @@
         }
     }
     
+}
+
+
+//////////////////////////////////////////// MEDIA SCREEN POUR LE MENU BURGER ////////////////////////////////////////////
+@media only screen and (min-width: 600px) and (max-width: 720px) {
+    .site_main_prof_page {
+
+        h3 {
+            margin: 100px 0 3px 0;
+        }  
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 820px) {
+    .site_main_prof_page {
+
+        h3 {
+            margin: 50px 0 3px 0;
+        }  
+    }
+}
+
+
+//////////////////////////////////////////// ÉCRAN MOYEN ////////////////////////////////////////////
+@media only screen and (min-width: 600px) and (max-width: 820px) {
+    .site_main_prof_page {
+
+        h3 {
+            letter-spacing: 10px;
+            font-size: 1.2rem;
+        }  
+    }
+}
+
+//////////////////////////////////////////// GRAND ÉCRAN ////////////////////////////////////////////
+@media only screen and (min-width: 820px) and (max-width: 1920px) {
+    .site_main_prof_page {
+
+        h3 {
+            color: $color__actif;
+            margin: 55px 0 5px 0;
+            letter-spacing: 12px;
+            font-size: 1.5rem;
+        }  
+    }
+}
+
+//////////////////////////////////////////// TRÈS GRAND ÉCRAN ////////////////////////////////////////////
+@media only screen and (min-width: 1920px) {
+    .site_main_prof_page {
+
+        h3 {
+            color: $color__actif;
+            margin: 75px 0 5px 0;
+            letter-spacing: 12px;
+            font-size: 1.7rem;
+        }  
+    }
 }
 

@@ -1,15 +1,17 @@
 /* ---------------- BACKGROUND */
-$color__background-header : #19191948;
+$color__background-header_mobile : #191919;
+$color__background-header : #19191942;
 $color__background-body : #191919;
 $color__background-footer : rgb(0, 0, 0);
 $color__background-nav : #19191948;
 
 /* ---------------- LIENS */
-$color__link : rgb(255, 255, 255);
-$color__link-hover : rgb(186, 175, 255);
-$color__link-visited : rgb(255, 255, 255);
-$color__link-on : rgb(186, 175, 255);
+$color__link : #ABABAB;
+$color__link-hover : white;
+$color__link-visited : #ABABAB;
+$color__link-on : white;
 
 /*----------------- TYPO */
 $color__actif : rgb(72, 72, 241);
 $color__text-main : white;
+$color__actif__nav : white;
