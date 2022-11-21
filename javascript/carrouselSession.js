@@ -23,6 +23,8 @@ sessionsListe[0].classList.remove("transparence");
 
 //Lorsque la flèche de gauche est clicker,
 arrows[0].addEventListener("mousedown", () => {
+    arrows[0].disabled = true;
+    arrows[1].disabled = true;
     //Si nbSession est en haut de 0 
     if(nbSession > 0){
         ajoutTransparence();
@@ -37,12 +39,19 @@ arrows[0].addEventListener("mousedown", () => {
     
     setTimeout(retireTransparenceTitre, 300);
     setTimeout(retireTransparenceSession, 500);
+    setTimeout(()=>{
+        enableDisableArrows();
+        arrows[1].disabled = false;
+
+    },500);
 
     ouvrirCoursButton();
-    enableDisableArrows();
+    
 })
 //Lorsque la flèche de droite est clicker,
 arrows[1].addEventListener("mousedown", () => {
+    arrows[1].disabled = true;
+    arrows[0].disabled = true;
     //Si nbSession est en bas de 5
     if(nbSession < 5){
         ajoutTransparence();
@@ -59,7 +68,11 @@ arrows[1].addEventListener("mousedown", () => {
     setTimeout(retireTransparenceSession, 500);
 
     ouvrirCoursButton();
-    enableDisableArrows();
+    setTimeout(()=>{
+        enableDisableArrows();
+        arrows[0].disabled = false;
+
+    },500);
 })
 
 let titreCours = document.querySelectorAll(".cours > section > h1");
