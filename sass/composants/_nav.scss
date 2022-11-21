@@ -22,7 +22,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: $color__background-nav;
+    background-color: $color__background-header_mobile;
     border-bottom: 1px solid #d7d7d716;
     padding: 5px 10px;
 
@@ -37,7 +37,7 @@
 }
 
 #menu-navpages-1 {
-    background-color: $color__background-nav;
+    background-color: $color__background-header_mobile;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -87,19 +87,27 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: $color__background-nav;
+        background-color: $color__background-header;
         border-bottom: 1px solid #d7d7d716;
         width: 100%;
     }
 
+
     .navMobile {
         display: none;
+
+        section{
+            background-color: $color__background-header;
+        }
     }
 
     .Titre {
         font-size: 40px;
     }
 
+    #menu-navpages-1 {
+        background-color: $color__background-header;
+    }
     #menu-navpages li {
         list-style: none;
         height: 100%;
