@@ -64,6 +64,8 @@
     .imgProf {
         display: flex;
         position:relative;
+        width: 30vw;
+        height: auto;
     }
 
     .titreProf {
@@ -97,12 +99,19 @@
     
     .left-right {
         order: 2;
+        button:nth-of-type(1) {
+            order: -2;
+        }
+        button:nth-of-type(2) {
+            order: 2;
+        }
     }
 }
 
 @media only screen and (min-width: 600px) {
     
     .site_main_prof_page {
+
         flex-direction: row;
         justify-content: start;
         width: 100%;
@@ -115,13 +124,11 @@
             margin: 0 40px 0 0;
 
             button:nth-of-type(1) {
-                order: -2;
                 transform: rotateZ(90deg);
             }
 
             button:nth-of-type(2) {
                 transform: rotateZ(90deg);
-                order: 2;
             }
             
             img {
@@ -178,7 +185,7 @@
 
         .contenuProf {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: flex-start;
             align-items: center;
             background-color: rgb(107, 107, 107);
@@ -193,6 +200,11 @@
                 border-radius: 0% 13px 13px 13px;
                 margin: 10px;
                 align-self: flex-start;
+            }
+
+            .containerProf{
+                display: flex;
+                flex-direction: row;
             }
         }
 

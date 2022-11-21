@@ -1,6 +1,6 @@
 let arrows = document.querySelectorAll(".left-right button");//var contenant les flèches gauche droite des carrousels
 let enseignants = document.getElementsByClassName("enseignants");//var contenant la liste des enseignants(un par un) - 14 objets(profs)
-let nbRandom = Math.floor(Math.random() * 10);//nombre aléatoire pour générer un prof différent à chaque refresh(pour format desktop)
+let nbRandom = Math.floor(Math.random() * enseignants.length);//nombre aléatoire pour générer un prof différent à chaque refresh(pour format desktop)
 let counter = document.getElementById("counter");//Var contenant le compteur du nombre de prof
 let imgCarrousel = document.getElementsByClassName("imgProf");//var contenant la liste des images des enseignants(un par un) - 14 objets(images)
 

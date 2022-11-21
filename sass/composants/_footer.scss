@@ -3,7 +3,13 @@
     width: 100%;
     color: $color__text-main;
     z-index: 0;
-    padding: 40px 0 50px 50px;
+
+    &_info{
+        display: flex;
+        flex-direction: column;
+    }
+
+
     .footer_section{
         h5{
             margin: 5px 0;
@@ -23,6 +29,17 @@
                 background-color: rgb(28, 28, 28);
                 color: white;
             }
+        }
+    }
+}
+@media only screen and (min-width: 720px) {
+    .site_footer{
+        padding: 50px;
+
+        &_info{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
         }
     }
 }
