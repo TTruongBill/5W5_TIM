@@ -1,5 +1,12 @@
 <?php 
     get_header(); 
+    $thumb_url = get_the_post_thumbnail_url();       
+    $thumb_low = strtolower($thumb_url);      
+    if (strpos($thumb_low, '.gif') === false) {
+        $thumb_size = 'large';
+    } else {
+        $thumb_size = 'full';       
+    }
 ?>
     <main class="site_main_prof_page">
          <section class="left-right">
@@ -8,9 +15,7 @@
                 $catPost = get_posts(array('category_name' => 'projet', "numberposts" => 11));
                 foreach ($catPost as $post) : setup_postdata($post); 
             ?> 
-            <section class="imgProf">
-                <?php the_post_thumbnail(); ?>
-            </section>
+                <?php the_post_thumbnail($thumb_size, array('class' => 'imgProf')); ?>
             <?php endforeach;?>
             <button type="button"><i class="fa-solid fa-circle-chevron-right"></i></button>
         </section>
@@ -26,15 +31,16 @@
                         <h1><?php the_title(); ?></h1>
                     </section>
                     <section class="contenuProf">
-                        <?php the_post_thumbnail(); ?>
-                        <div class="elmProjet">
-                        <?php the_content();?>
+                        <div class="containerProf">
+                            <?php the_post_thumbnail(); ?>
+                            <div class="elmsProf"><?php the_content();?>
+                            <p class="counter"></p>
+                            </div>
                         </div>
                     </section>
                 </section>
                 <?php endforeach;?>
             </section>
-            <p id="counter"></p>
         </section>
         <div class="top_curve">
             <svg viewBox="0 0 800 600" preserveAspectRatio="none" style="width : calc(100% + 1.3px); height : 600px;">
