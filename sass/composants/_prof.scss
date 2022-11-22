@@ -88,7 +88,20 @@
         img {
             width: 100vw;
         }
+
+        .containerProf{
+            position: relative;
+
+            .elmsProf{
+                position: absolute;
+                height: 100%;
+                overflow-y: scroll;
+                z-index: 1;
+                top: 0;
+            }
+        }
     }
+
 
     .enseignants {
         display: flex;
@@ -117,14 +130,15 @@
 
         button {
             font-size: 2.5rem;
-        button:nth-of-type(1) {
-            order: -2;
-        }
-        button:nth-of-type(2) {
-            order: 2;
+
+            &:nth-of-type(1) {
+                order: -2;
+            }
+            &:nth-of-type(2) {
+                order: 2;
+            }
         }
     }
-}
 }
 
 @media only screen and (min-width: 600px) {
