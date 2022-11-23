@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
 theme name: 5W5_TIM
 Author: Truong Tien Tien Bill
@@ -381,27 +380,6 @@ img {
 
 figure {
   margin: 1em 0;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  border-radius: 13px;
-  background-color: #4D4D4D;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #707070;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #808080;
 }
 
 /*TYPOGRAPHY*/
@@ -1050,7 +1028,7 @@ textarea {
   top: 0;
   width: 100%;
 }
-.site_main_prof_page .enseignants {
+.site_main_prof_page .contenuComplet {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1125,7 +1103,7 @@ textarea {
     background-color: rgba(101, 101, 101, 0.66);
     height: 100vh;
   }
-  .enseignants {
+  .contenuComplet {
     margin: 20px;
     border-radius: 0% 13px 13px 13px;
     display: flex;
@@ -1133,13 +1111,13 @@ textarea {
     width: 92%;
     justify-content: center;
   }
-  .enseignants .titreProf {
+  .contenuComplet .titreProf {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .enseignants .contenuProf {
+  .contenuComplet .contenuProf {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1148,7 +1126,7 @@ textarea {
     border-radius: 0% 13px 13px 13px;
     width: 100%;
   }
-  .enseignants .contenuProf img {
+  .contenuComplet .contenuProf img {
     position: relative;
     left: 0;
     height: auto;
@@ -1157,11 +1135,11 @@ textarea {
     margin: 10px;
     align-self: flex-start;
   }
-  .enseignants .contenuProf .containerProf {
+  .contenuComplet .contenuProf .containerProf {
     display: flex;
     flex-direction: row;
   }
-  .enseignants .enseignants ­ > p {
+  .contenuComplet .contenuComplet > p {
     display: flex;
     flex-flow: column nowrap;
   }
@@ -1323,7 +1301,7 @@ textarea {
   top: 0;
   width: 100%;
 }
-.site_main_proj_page .enseignants {
+.site_main_proj_page .contenuComplet {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1398,7 +1376,7 @@ textarea {
     background-color: rgba(101, 101, 101, 0.66);
     height: 100vh;
   }
-  .enseignants {
+  .contenuComplet {
     margin: 20px;
     border-radius: 0% 13px 13px 13px;
     display: flex;
@@ -1406,13 +1384,13 @@ textarea {
     width: 92%;
     justify-content: center;
   }
-  .enseignants .titreProf {
+  .contenuComplet .titreProf {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .enseignants .contenuProf {
+  .contenuComplet .contenuProf {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1421,7 +1399,7 @@ textarea {
     border-radius: 0% 13px 13px 13px;
     width: 100%;
   }
-  .enseignants .contenuProf img {
+  .contenuComplet .contenuProf img {
     position: relative;
     left: 0;
     height: auto;
@@ -1430,11 +1408,11 @@ textarea {
     margin: 10px;
     align-self: flex-start;
   }
-  .enseignants .contenuProf .containerProf {
+  .contenuComplet .contenuProf .containerProf {
     display: flex;
     flex-direction: row;
   }
-  .enseignants .enseignants ­ > p {
+  .contenuComplet .contenuComplet > p {
     display: flex;
     flex-flow: column nowrap;
   }
