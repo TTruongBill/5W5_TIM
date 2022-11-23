@@ -384,6 +384,27 @@ figure {
   margin: 1em 0;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 13px;
+  background-color: #4D4D4D;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #707070;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #808080;
+}
+
 /*TYPOGRAPHY*/
 body,
 button,
@@ -591,48 +612,6 @@ textarea {
   #menu-navpages li a {
     text-decoration: none;
   }
-}
-
-/* width */
-
-.contenuProf ::-webkit-scrollbar {
-
-  width: 12px;
-
-}
-
-
-
-/* Track */
-
-.contenuProf ::-webkit-scrollbar-track {
-
-  border-radius: 13px;
-
-  background-color: #4D4D4D;
-
-}
-
- 
-
-/* Handle */
-
-.contenuProf ::-webkit-scrollbar-thumb {
-
-  background: #707070; 
-
-  border-radius: 10px;
-
-}
-
-
-
-/* Handle on hover */
-
-.contenuProf ::-webkit-scrollbar-thumb:hover {
-
-  background: #808080; 
-
 }
 @media only screen and (min-width: 1920px) {
   #menu-navpages li {
