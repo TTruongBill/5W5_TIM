@@ -100,13 +100,15 @@
 
         .containerProf{
             position: relative;
-
+            width: 100%;
+            
             .elmsProf{
                 position: absolute;
                 height: 100%;
                 overflow-y: scroll;
                 z-index: 1;
                 top: 0;
+                width: 100%;
             }
         }
     }
@@ -130,12 +132,12 @@
 
         button {
             font-size: 2.5rem;
-
             margin: 7px;
-        button:nth-of-type(1) {
+            
+        &:nth-of-type(1) {
             order: -2;
         }
-        button:nth-of-type(2) {
+        &:nth-of-type(2) {
             order: 2;
 
         }
@@ -177,6 +179,11 @@
             img {
                 position: relative;
                 // width: auto; 
+            }
+
+            .containerProf > .elmsProf {
+                width: 57%;
+                right: 0;
             }
         }
     }

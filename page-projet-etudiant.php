@@ -8,7 +8,7 @@
         $thumb_size = 'full';       
     }
 ?>
-    <main class="site_main_prof_page">
+    <main class="site_main_proj_page">
          <section class="left-right">
             <button type="button"><i class="fa-solid fa-circle-chevron-left"></i></button>
             <?php 
@@ -34,13 +34,13 @@
                         <div class="containerProf">
                             <?php the_post_thumbnail(); ?>
                             <div class="elmsProf"><?php the_content();?>
-                            <p class="counter"></p>
                             </div>
                         </div>
                     </section>
                 </section>
                 <?php endforeach;?>
             </section>
+            <p class="counter"></p>
         </section>
         <div class="top_curve">
             <svg viewBox="0 0 800 600" preserveAspectRatio="none" style="width : calc(100% + 1.3px); height : 600px;">
