@@ -370,8 +370,7 @@ body main {
 
 /* Make sure embeds and iframes fit their containers. */
 embed,
-iframe,
-object {
+iframe {
   max-width: 100%;
 }
 
@@ -1020,6 +1019,7 @@ textarea {
 }
 .site_main_prof_page .contenuProf .containerProf {
   position: relative;
+  width: 100%;
 }
 .site_main_prof_page .contenuProf .containerProf .elmsProf {
   position: absolute;
@@ -1292,6 +1292,7 @@ textarea {
 }
 .site_main_proj_page .contenuProf .containerProf {
   position: relative;
+  width: 100%;
 }
 .site_main_proj_page .contenuProf .containerProf .elmsProf {
   position: absolute;
@@ -1533,7 +1534,6 @@ textarea {
   -webkit-animation: animCoursOuvert 3s forwards;
           animation: animCoursOuvert 3s forwards;
   transition-timing-function: cubic-bezier(0.78, 0, 0.25, 1.48);
-  order: -1;
 }
 .site_main_cours_page .animCarrouselCours {
   -webkit-animation-name: animCarrouselCours();
@@ -1568,30 +1568,29 @@ button:hover:enabled {
   transition-timing-function: cubic-bezier(0.78, 0, 0.25, 1.48);
 }
 
-.cours[data-order="1"] {
-  position: relative;
-  top: 0;
-  left: 0;
+@media only screen and (min-width: 600px) {
+  .cours[data-order="1"] {
+    position: relative;
+    order: -1;
+    top: 0;
+    left: 0;
+  }
+  .cours[data-order="2"] {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .cours[data-order="3"] {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  .cours[data-order="4"] {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
 }
-
-.cours[data-order="2"] {
-  position: relative;
-  top: 0;
-  right: 0;
-}
-
-.cours[data-order="3"] {
-  position: relative;
-  bottom: 0;
-  left: 0;
-}
-
-.cours[data-order="4"] {
-  position: relative;
-  bottom: 0;
-  left: 0;
-}
-
 @-webkit-keyframes animCarrouselCours {
   from {
     scale: 1;
@@ -1600,7 +1599,6 @@ button:hover:enabled {
     scale: 1;
   }
 }
-
 @keyframes animCarrouselCours {
   from {
     scale: 1;
@@ -1609,29 +1607,33 @@ button:hover:enabled {
     scale: 1;
   }
 }
-@-webkit-keyframes animCoursOuvert {
-  15% {
-    opacity: 0;
-    visibility: hidden;
-    width: 93%;
+@media only screen and (min-width: 600px) {
+  @-webkit-keyframes animCoursOuvert {
+    15% {
+      opacity: 0;
+      visibility: hidden;
+      width: 93%;
+    }
+    100% {
+      opacity: 100%;
+      visibility: visible;
+      order: 0;
+      width: 93%;
+      order: -1;
+    }
   }
-  100% {
-    opacity: 100%;
-    visibility: visible;
-    order: -1;
-    width: 93%;
-  }
-}
-@keyframes animCoursOuvert {
-  15% {
-    opacity: 0;
-    visibility: hidden;
-    width: 93%;
-  }
-  100% {
-    opacity: 100%;
-    visibility: visible;
-    order: -1;
-    width: 93%;
+  @keyframes animCoursOuvert {
+    15% {
+      opacity: 0;
+      visibility: hidden;
+      width: 93%;
+    }
+    100% {
+      opacity: 100%;
+      visibility: visible;
+      order: 0;
+      width: 93%;
+      order: -1;
+    }
   }
 }/*# sourceMappingURL=style.css.map */
