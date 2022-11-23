@@ -119,13 +119,9 @@ function ouvrirCoursButton(){
             content_total[i].style.display = "flex";
             chiffreCours = i;
             coursSession[i].setAttribute("data-order", 1);
-
-       
-            
             
             for(let j = chiffreCours - 1; j >= 0;j--){
                 coursSession[j].setAttribute("data-order", j + 2); 
-                
             }
             for(let j = chiffreCours + 1; j < coursSession.length; j++){
                 coursSession[j].setAttribute("data-order", j + 1);
@@ -134,8 +130,10 @@ function ouvrirCoursButton(){
 
         fermerCours[i].addEventListener("mousedown", () => {
             fermerCoursAuto(coursSession[i], fermerCours[i], ouvrirCours[i], content_trim[i], content_total[i]);
+            for(let j = 0; j < coursSession.length;j++){
+                coursSession[j].setAttribute("data-order", j + 1); 
+            }
         })
-    
     }
     
 }

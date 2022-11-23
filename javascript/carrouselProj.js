@@ -8,7 +8,7 @@ let nbProf = nbRandom;
 //***************Initialisation de la page **********************
 enleverProf();//Enlever tous les profs
 
-if(nbProf == 11){
+if(nbProf == 10){
     imgCarrousel[nbProf - 1].style.display = "flex";
     imgCarrousel[nbProf].style.display = "flex";
     imgCarrousel[0].style.display = "flex";
@@ -39,15 +39,15 @@ arrows[0].addEventListener("mousedown", () => {
         imgCarrousel[nbProf - 1].style.display = "flex";
 
     }else if(nbProf == 0){//sinon si nbProf est égal à 0
-        nbProf = 11;//mettre nbProf à 13
+        nbProf = 10;//mettre nbProf à 13
         imgCarrousel[nbProf].style.order = "-1";
         imgCarrousel[nbProf - 1].style.display = "flex";
         imgCarrousel[nbProf - 1].style.order = "-1";
 
     }else if(nbProf == 1){//si nbProf est égal à 13, afficher le prof suivant
         nbProf--;//Décrémenter
-        imgCarrousel[11].style.display = "flex";
-        imgCarrousel[11].style.order = "-1";
+        imgCarrousel[10].style.display = "flex";
+        imgCarrousel[10].style.order = "-1";
     }
 
     imgCarrousel[nbProf].style.display = "flex";
@@ -60,19 +60,19 @@ arrows[0].addEventListener("mousedown", () => {
 arrows[1].addEventListener("mousedown", () => {
     enleverProf();//enlever tous les profs
 
-    if(nbProf < 11 && nbProf != 10 ) {//si nbProf est plus grand ou egal que 0 et plus petit que 13
+    if(nbProf < 10 && nbProf != 9 ) {//si nbProf est plus grand ou egal que 0 et plus petit que 13
         imgCarrousel[nbProf].style.display = "flex";
         nbProf++;//Incrémenter
         imgCarrousel[nbProf].style.display = "flex";
         imgCarrousel[nbProf + 1].style.display = "flex";
 
-    }else if(nbProf == 10){//sinon si nbProf est égal à 13
+    }else if(nbProf == 9){//sinon si nbProf est égal à 13
         imgCarrousel[nbProf].style.display = "flex";
         nbProf++;//Décrémenter
         imgCarrousel[nbProf].style.display = "flex";
         imgCarrousel[0].style.display = "flex";
         imgCarrousel[0].style.order = "1";
-    }else if(nbProf == 11){//sinon si nbProf est égal à 13
+    }else if(nbProf == 10){//sinon si nbProf est égal à 13
         imgCarrousel[nbProf].style.display = "flex";
         imgCarrousel[nbProf].style.order = "-1";
         nbProf = 0;//mettre nbProf à 13
@@ -90,7 +90,7 @@ arrows[1].addEventListener("mousedown", () => {
 function enleverProf(){
     //Si nbProf est en haut de 0 et en bas de 14
     //rajouter un display none à tous les éléments du array de profs
-    if(nbProf => 0 && nbProf < 12){
+    if(nbProf => 0 && nbProf < 11){
         for(let i = 0; i < enseignants.length; i++){
             enseignants[i].style.display= "none";
             imgCarrousel[i].style.display = "none";

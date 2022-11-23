@@ -112,6 +112,7 @@ function cidw_5W5_enqueue(){
 
 add_action("wp_enqueue_scripts", "cidw_5W5_enqueue");
 
+
 /*--------------------------Enregistrer les menu*/
 
 Function cidw_5w5_enregistre_mon_menu() {
@@ -129,6 +130,7 @@ add_action('after_setup_theme', 'cidw_5w5_enregistre_mon_menu');
 
 add_theme_support('post-thumbnails');//rajouter les post-tumbnails
 add_theme_support('widgets');//rajouter les widget
+add_theme_support( 'custom-logo' ); // Add custom-logo support
 /*--------------------------Enregistrer les sidebars*/
 function my_register_sidebars(){
     register_sidebar(
