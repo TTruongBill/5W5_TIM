@@ -25,7 +25,7 @@ But : Faire un site avec Wordpress qui a pour but de mettre en valeur la techniq
 - animations de changement de session
 - animation pour ouvrir les cours 
 
-#CSS :
+# CSS :
 - page cours à pauffiner
 - page prof à pauffiner
 - page projet à pauffiner
