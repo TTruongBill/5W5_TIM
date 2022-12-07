@@ -98,13 +98,8 @@ function cidw_5W5_enqueue(){
         wp_enqueue_script("CarrouselCours");
     }
 
-    //Si c'est la page prof, activer le script de carrouselvprofs
-    if(is_page("prof")){
-        wp_enqueue_script("CarrouselProf");
-    }
-
-    //Si c'est la page prof, activer le script de carrouselvprofs
-    if(is_page("projet-etudiant")){
+    //Si c'est la page prof, activer le script de carrousevprofs
+    if(is_page("projet-etudiant")|| is_page("prof")){
         wp_enqueue_script("CarrouselProj");
     }
 
