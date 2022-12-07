@@ -10,6 +10,28 @@ body {
     align-items: center;
     overflow-x: hidden;
     justify-content: space-between;
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+  
+    /* Track */
+    ::-webkit-scrollbar-track {
+        border-radius: 13px;
+        background-color: #4D4D4D;
+    }
+  
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #707070; 
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #808080; 
+    }
     
     main {
         background-color: $color__background-body;

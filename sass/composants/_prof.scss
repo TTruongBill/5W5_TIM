@@ -101,12 +101,18 @@
         .containerProf{
             position: relative;
 
-            .elmsProf{
+            .elmsProf {
                 position: absolute;
                 height: 100%;
                 overflow-y: scroll;
                 z-index: 1;
                 top: 0;
+
+                p {
+                    line-height: 2rem;
+                    text-align: justify;
+                    margin: 25px;
+                }
             }
         }
     }
@@ -223,21 +229,29 @@
             align-items: center;
             background-color: rgba(48, 48, 48, 0.75);
             border-radius: 0% 13px 13px 13px;
-            width: 100%;
     
             img {
                 position: relative;
                 left:0;
                 height:auto;
-                width: 40%;
+                width: 30%;
                 border-radius: 0% 13px 13px 13px;
                 margin: 10px;
                 align-self: flex-start;
             }
 
+            .elmsProf p {
+                margin: 25px 25px 25px 10px;
+            }
+
             .containerProf{
                 display: flex;
                 flex-direction: row;
+            }
+
+            .containerProf > .elmsProf {
+                width: 67%;
+                right: 0;
             }
         }
 
@@ -312,6 +326,15 @@
         #right {
             margin-bottom: 55px;
         }
+
+        .contenuProf {
+            .containerProf {
+                .elmsProf p {
+                    line-height: 2.5rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
     }
 }
 
@@ -341,6 +364,15 @@
 
         #right {
             margin-bottom: 75px;
+        }
+
+        .contenuProf {
+            .containerProf {
+                .elmsProf p {
+                    line-height: 2.8rem;
+                    font-size: 1.3rem;
+                }
+            }
         }
     }
 }
