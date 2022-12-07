@@ -59,18 +59,11 @@ function cidw_5W5_enqueue(){
      filemtime(get_template_directory() . '/javascript/carrouselSession.js'),
      true);
 
-     //Javascript carrouselProf
-     wp_register_script('CarrouselProf',
-     get_template_directory_uri() . '/javascript/carrouselProf.js',
-     array(),
-     filemtime(get_template_directory() . '/javascript/carrouselProf.js'),
-     true);
-
      //Javascript carrouselProj
-     wp_register_script('CarrouselProj',
-     get_template_directory_uri() . '/javascript/carrouselProj.js',
+     wp_register_script('CarrouselProjProf',
+     get_template_directory_uri() . '/javascript/carrouselProjProf.js',
      array(),
-     filemtime(get_template_directory() . '/javascript/carrouselProj.js'),
+     filemtime(get_template_directory() . '/javascript/carrouselProjProf.js'),
      true);
  
     //Javascript menuBurger
@@ -98,14 +91,9 @@ function cidw_5W5_enqueue(){
         wp_enqueue_script("CarrouselCours");
     }
 
-    //Si c'est la page prof, activer le script de carrouselvprofs
-    if(is_page("prof")){
-        wp_enqueue_script("CarrouselProf");
-    }
-
-    //Si c'est la page prof, activer le script de carrouselvprofs
-    if(is_page("projet-etudiant")){
-        wp_enqueue_script("CarrouselProj");
+    //Si c'est la page prof, activer le script de carrousevprofs
+    if(is_page("projet-etudiant")|| is_page("prof")){
+        wp_enqueue_script("CarrouselProjProf");
     }
 
 }

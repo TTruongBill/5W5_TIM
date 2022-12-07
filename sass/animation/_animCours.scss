@@ -15,7 +15,6 @@
     .widthCoursOuvert {
         animation: animCoursOuvert 3s forwards;
         transition-timing-function: cubic-bezier(.78,0,.25,1.48);
-        order: -1;
     }
 
     .animCarrouselCours {
@@ -59,28 +58,31 @@ button{
     }
 }
 
-.cours[data-order="1"]{
-    position: relative;
+@media only screen and (min-width: 600px){
 
-    top: 0;
-    left: 0;
+    .cours[data-order="1"]{
+        position: relative;
+        order: -1;
+        top: 0;
+        left: 0;
+    }
+    .cours[data-order="2"]{
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .cours[data-order="3"]{
+        position: relative;
+        bottom: 0;
+        left: 0;
+    }
+    .cours[data-order="4"]{
+        position: relative;
+        bottom: 0;
+        left: 0;
+    }
+    
 }
-.cours[data-order="2"]{
-    position: relative;
-    top: 0;
-    right: 0;
-}
-.cours[data-order="3"]{
-    position: relative;
-    bottom: 0;
-    left: 0;
-}
-.cours[data-order="4"]{
-    position: relative;
-    bottom: 0;
-    left: 0;
-}
-
 @keyframes animCarrouselCours {
     from {
         scale: 1;
@@ -90,6 +92,7 @@ button{
         scale: 1;
     }
 }
+@media only screen and (min-width: 600px){
 
 @keyframes animCoursOuvert {
     from {
@@ -112,7 +115,10 @@ button{
     100% {
         opacity: 100%;
         visibility: visible;
-        order: -1;
+        order: 0;
         width: 93%;
-    }
+        order: -1;
+        }
+        
+}
 }
