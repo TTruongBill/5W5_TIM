@@ -27,7 +27,32 @@ if(nbRandom == contenu.length - 1){
 
 contenu[nbRandom].style.display = "flex";//Afficher le prof selon le prof choisi
 for(let i = 0; i < counter.length; i++){
-    counter[i].innerHTML = nbRandom + 1 + "/" + contenu.length;//Écrire dans le compteur le prof auquel on est rendu et le nombre de prof total
+    counter[0].innerHTML = nbRandom + 1 + "/" + contenu.length;//Écrire dans le compteur le prof auquel on est rendu et le nombre de prof total
+}
+
+for(let i = 0; i < imgCarrousel.length; i++){
+    imgCarrousel[i].addEventListener("mousedown", ()=>{
+        enleverProf();//enlever tous les profs
+        contenu[i].style.display = "flex";
+        counter[0].innerHTML = i + 1 + "/" + contenu.length
+        
+        if(i == contenu.length - 1){
+            imgCarrousel[i - 1].style.display = "flex";
+            imgCarrousel[i].style.display = "flex";
+            imgCarrousel[0].style.display = "flex";
+            imgCarrousel[0].style.order = "1";
+        } else if(i== 0){
+            imgCarrousel[i].style.display = "flex";
+            imgCarrousel[i + 1].style.display = "flex";
+            imgCarrousel[contenu.length - 1].style.display = "flex";
+            imgCarrousel[contenu.length - 1].style.order = "-1";
+
+        }else{
+            imgCarrousel[i].style.display = "flex";
+            imgCarrousel[i + 1].style.display = "flex";
+            imgCarrousel[i - 1].style.display = "flex";
+        }
+    })
 }
 //Lorsque la flèche de gauche est clicker,
 arrows[0].addEventListener("mousedown", () => {
@@ -52,9 +77,7 @@ arrows[0].addEventListener("mousedown", () => {
 
     imgCarrousel[nbRandom].style.display = "flex";
     contenu[nbRandom].style.display = "flex";//mettre en flex le display du prof actuel
-    for(let i = 0; i < counter.length; i++){
-        counter[i].innerHTML = nbRandom + 1 + "/" + contenu.length;//Écrire dans le compteur le prof auquel on est rendu et le nombre de prof total
-    }
+    counter[0].innerHTML = nbRandom + 1 + "/" + contenu.length;//Écrire dans le compteur le prof auquel on est rendu et le nombre de prof total
 })
 //Lorsque la flèche de droite est clicker,
 arrows[1].addEventListener("mousedown", () => {
@@ -81,9 +104,7 @@ arrows[1].addEventListener("mousedown", () => {
     }
 
     contenu[nbRandom].style.display = "flex"; //mettre en flex le display du prof actuel
-    for(let i = 0; i < counter.length; i++){
-        counter[i].innerHTML = nbRandom + 1 + "/" + contenu.length;//Écrire dans le compteur le prof auquel on est rendu et le nombre de prof total
-    }
+    counter[0].innerHTML = nbRandom + 1 + "/" + contenu.length;//Écrire dans le compteur le prof auquel on est rendu et le nombre de prof total
 })
 
 //Fonction qui permet d'enlever l'affichage de tous les profs
