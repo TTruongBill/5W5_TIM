@@ -1,4 +1,8 @@
 let lis = document.querySelectorAll("#menu-navpages li");//var qui contient la liste de navmenu
+let inscription = document.querySelectorAll(".inscriptionNav a");
+
+inscription[0].setAttribute("target", "_blank");
+inscription[1].setAttribute("target", "_blank");
 //let locationName = "/wordpress/index.php"; //Pour la base de donnée locale, sinon, enleve sur siteground
 
 //Sur la base de donnée locale, rajouter celui ci

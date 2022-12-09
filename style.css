@@ -356,6 +356,24 @@ body {
   align-items: center;
   overflow-x: hidden;
   justify-content: space-between;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body ::-webkit-scrollbar {
+  width: 12px;
+}
+body ::-webkit-scrollbar-track {
+  border-radius: 13px;
+  background-color: #4D4D4D;
+}
+body ::-webkit-scrollbar-thumb {
+  background: #707070;
+  border-radius: 10px;
+}
+body ::-webkit-scrollbar-thumb:hover {
+  background: #808080;
 }
 body main {
   background-color: #191919;
@@ -399,12 +417,21 @@ textarea {
   display: none;
 }
 
+.site_main_front_page {
+  width: 100%;
+  height: 100%;
+}
 .site_main_front_page h1 {
   margin: 0;
 }
-
-.wp-block-video {
+.site_main_front_page .wp-block-video {
   margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.site_main_front_page .wp-block-video video {
+  width: 100%;
+  height: 100%;
 }
 
 .site_header {
@@ -1018,7 +1045,6 @@ textarea {
 }
 .site_main_prof_page .contenuProf .containerProf {
   position: relative;
-  width: 100%;
 }
 .site_main_prof_page .contenuProf .containerProf .elmsProf {
   position: absolute;
@@ -1027,6 +1053,11 @@ textarea {
   z-index: 1;
   top: 0;
   width: 100%;
+}
+.site_main_prof_page .contenuProf .containerProf .elmsProf p {
+  line-height: 2rem;
+  text-align: justify;
+  margin: 25px;
 }
 .site_main_prof_page .contenuComplet {
   display: flex;
@@ -1124,20 +1155,26 @@ textarea {
     align-items: center;
     background-color: rgba(48, 48, 48, 0.75);
     border-radius: 0% 13px 13px 13px;
-    width: 100%;
   }
   .contenuComplet .contenuProf img {
     position: relative;
     left: 0;
     height: auto;
-    width: 40%;
+    width: 30%;
     border-radius: 0% 13px 13px 13px;
     margin: 10px;
     align-self: flex-start;
   }
+  .contenuComplet .contenuProf .elmsProf p {
+    margin: 25px 25px 25px 10px;
+  }
   .contenuComplet .contenuProf .containerProf {
     display: flex;
     flex-direction: row;
+  }
+  .contenuComplet .contenuProf .containerProf > .elmsProf {
+    width: 67%;
+    right: 0;
   }
   .contenuComplet .contenuComplet > p {
     display: flex;
@@ -1182,6 +1219,10 @@ textarea {
   .site_main_prof_page #right {
     margin-bottom: 55px;
   }
+  .site_main_prof_page .contenuProf .containerProf .elmsProf p {
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+  }
 }
 @media only screen and (min-width: 1920px) {
   .site_main_prof_page .left-right {
@@ -1201,6 +1242,10 @@ textarea {
   }
   .site_main_prof_page #right {
     margin-bottom: 75px;
+  }
+  .site_main_prof_page .contenuProf .containerProf .elmsProf p {
+    line-height: 2.8rem;
+    font-size: 1.3rem;
   }
 }
 .site_main_proj_page {
