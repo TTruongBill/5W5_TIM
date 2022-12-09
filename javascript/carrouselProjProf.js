@@ -26,12 +26,11 @@ if(nbRandom == contenu.length - 1){
 }
 
 contenu[nbRandom].style.display = "flex";//Afficher le prof selon le prof choisi
-for(let i = 0; i < counter.length; i++){
-    counter[0].innerHTML = nbRandom + 1 + "/" + contenu.length;//Écrire dans le compteur le prof auquel on est rendu et le nombre de prof total
-}
+counter[0].innerHTML = nbRandom + 1 + "/" + contenu.length;//Écrire dans le compteur le prof auquel on est rendu et le nombre de prof total
 
 for(let i = 0; i < imgCarrousel.length; i++){
     imgCarrousel[i].addEventListener("mousedown", ()=>{
+        nbRandom = i;
         enleverProf();//enlever tous les profs
         contenu[i].style.display = "flex";
         counter[0].innerHTML = i + 1 + "/" + contenu.length
