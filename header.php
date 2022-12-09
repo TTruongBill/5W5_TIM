@@ -7,7 +7,7 @@
     <title>Document</title>
     <?php wp_head(); ?>
 </head> 
-<body <?php body_class("site"); ?>>
+<body <?php body_class("site"); if(is_page("accueil")){?> onLoad="window.scroll(0, 70)" <?php } ?>>
 <header class="site_header">
     <section class="site_header_title">
         <?php the_custom_logo();?>
