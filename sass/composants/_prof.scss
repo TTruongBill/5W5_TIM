@@ -36,7 +36,7 @@
     }
     
     .elmsProf {
-        display:flex;
+        display:none;
         flex-flow: column nowrap;
     }
 
@@ -244,7 +244,9 @@
                 margin: 10px;
                 align-self: flex-start;
             }
-
+            .elmsProf {
+                display: flex;
+            }
             .elmsProf p {
                 margin: 25px 25px 25px 10px;
             }
@@ -267,6 +269,37 @@
     }
     
 }
+.textePull{
+    width: 100%;
+    height: auto;
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s;
+    transform: translateY(0vw);
+
+    .pullEl{
+        text-align: center;
+        border-bottom: 1px solid black;
+        z-index: 3;
+        margin: 0;
+        padding: 16px;
+        
+    }
+}
+
+.pullUp{
+    transform: translateY(-60vw);
+}
+
+.elmsProfMobile{
+    display: none;
+    flex-direction: column;
+}
 
 
 //////////////////////////////////////////// MEDIA SCREEN POUR LE MENU BURGER ////////////////////////////////////////////
@@ -285,6 +318,9 @@
         h3 {
             margin: 50px 0 3px 0;
         }  
+        .textePull{
+            display: none;
+        }
     }
 }
 
@@ -302,11 +338,18 @@
             font-size: 1.2rem;
         }
     }
+    .textePull{
+        display: none;
+    }
 }
 
 //////////////////////////////////////////// GRAND ÉCRAN ////////////////////////////////////////////
 @media only screen and (min-width: 820px) and (max-width: 1920px) {
     .site_main_prof_page {
+
+        .textePull{
+            display: none;
+        }
 
         .left-right {
             width: 10%;
@@ -346,7 +389,9 @@
 //////////////////////////////////////////// TRÈS GRAND ÉCRAN ////////////////////////////////////////////
 @media only screen and (min-width: 1920px) {
     .site_main_prof_page {
-
+        .textePull{
+                display: none;
+        }
         .left-right {
             width: 10%;
         }
