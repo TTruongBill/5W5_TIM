@@ -27,14 +27,8 @@ if(location.pathname==(locationName + "/cours/")) {
 
 if(location.pathname==("/cours/")) {
     lis[0].classList.add("navCouleur");
-} else if (location.pathname==("/prof/")){
-    lis[1].classList.add("navCouleur");
 } else if (location.pathname==("/projet-etudiant/")){
+    lis[1].classList.add("navCouleur");
+} else if (location.pathname==("/prof/")){
     lis[2].classList.add("navCouleur");
-} else if (location.pathname==("/vie-etudiante/")){
-    lis[3].classList.add("navCouleur");
-} else if (location.pathname==("/avenir/")){
-    lis[4].classList.add("navCouleur");
-} else if (location.pathname==("/inscription/")){
-    lis[5].classList.add("navCouleur");
 }
