@@ -114,6 +114,7 @@ function enleverProf(){
     //rajouter un display none à tous les éléments du array de profs
     if(nbRandom => 0 && nbRandom < contenu.length){
         for(let i = 0; i < contenu.length; i++){
+            elmsMobile[i].style.display= "none";
             contenu[i].style.display= "none";
             imgCarrousel[i].style.display = "none";
             imgCarrousel[i].style.order = "0";
