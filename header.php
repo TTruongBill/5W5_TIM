@@ -10,8 +10,8 @@
 <body <?php body_class("site"); if(is_page("accueil")){?> onLoad="window.scroll(0, 70)" <?php } ?>>
 <header class="site_header">
     <section class="site_header_title">
-        <?php the_custom_logo();?>
         <nav class="navDesktop">
+        <?php the_custom_logo();?>
         <?php wp_nav_menu(array('menu'=>"navPages",
                                 "container"=>"nav",
                                 "container_class"=>"navDesktopListe")); 
@@ -20,7 +20,7 @@
         <nav class="navMobile">
             <section>
                 <?php the_custom_logo();?>
-                <label for="menuNavMobile">
+                    <label for="menuNavMobile">
                         <svg class="menuBurger" viewBox="0 0 100 80" width="40" height="40">
                         <rect id="line1" x="10" width="80" height="10" rx="7"></rect>
                         <rect id="line2" x="10" y="32" width="80" height="10" rx="7"></rect>
