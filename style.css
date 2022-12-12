@@ -1106,7 +1106,7 @@ textarea {
     width: 100%;
   }
   .site_main_prof_page .contenuProf, .site_main_proj_page .contenuProf {
-    width: auto;
+    width: 100%;
     height: 90%;
   }
   .site_main_prof_page .contenuProf img, .site_main_proj_page .contenuProf img {
@@ -1172,6 +1172,7 @@ textarea {
   .contenuComplet .contenuProf .containerProf {
     display: flex;
     flex-direction: row;
+    width: 100%;
   }
   .contenuComplet .contenuProf .containerProf > .elmsProf {
     width: 67%;
