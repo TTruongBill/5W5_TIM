@@ -80,10 +80,17 @@ function cidw_5W5_enqueue(){
      filemtime(get_template_directory() . '/javascript/activeNav.js'),
      true);
 
+     //Javascript scrollUp
+     wp_register_script('pullContent',
+     get_template_directory_uri() . '/javascript/pullContenu.js',
+     array(),
+     filemtime(get_template_directory() . '/javascript/pullContenu.js'),
+     true);
+
      //Si c'est une page, activer le script des menu burger et de couleurs pour le nav
     if(is_page()){
-    wp_enqueue_script("Burger");
-    wp_enqueue_script("navCouleur");
+        wp_enqueue_script("Burger");
+        wp_enqueue_script("navCouleur");
     }
 
     //Si c'est la page cours, activer le script de carrousel cours
@@ -94,6 +101,7 @@ function cidw_5W5_enqueue(){
     //Si c'est la page prof, activer le script de carrousevprofs
     if(is_page("projet-etudiant")|| is_page("prof")){
         wp_enqueue_script("CarrouselProjProf");
+        wp_enqueue_script("pullContent");
     }
 
 }

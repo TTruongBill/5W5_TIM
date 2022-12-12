@@ -107,7 +107,7 @@ function ouvrirCoursButton(){
     
     for(let i = 0; i <ouvrirCours.length; i++){
         ouvrirCours[i].addEventListener("mousedown", () => {
-
+            location.href='#sessions';
             for(let j = 0; j < ouvrirCours.length; j++){
                 fermerCoursAuto(coursSession[j], fermerCours[j], ouvrirCours[j], content_trim[j], content_total[j]);
             }

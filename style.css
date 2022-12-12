@@ -356,6 +356,24 @@ body {
   align-items: center;
   overflow-x: hidden;
   justify-content: space-between;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body ::-webkit-scrollbar {
+  width: 12px;
+}
+body ::-webkit-scrollbar-track {
+  border-radius: 13px;
+  background-color: #4D4D4D;
+}
+body ::-webkit-scrollbar-thumb {
+  background: #707070;
+  border-radius: 10px;
+}
+body ::-webkit-scrollbar-thumb:hover {
+  background: #808080;
 }
 body main {
   background-color: #191919;
@@ -399,12 +417,21 @@ textarea {
   display: none;
 }
 
+.site_main_front_page {
+  width: 100%;
+  height: 100%;
+}
 .site_main_front_page h1 {
   margin: 0;
 }
-
-.wp-block-video {
+.site_main_front_page .wp-block-video {
   margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.site_main_front_page .wp-block-video video {
+  width: 100%;
+  height: 100%;
 }
 
 .site_header {
@@ -965,7 +992,7 @@ textarea {
   height: 182px;
 }
 .site_main_prof_page .elmsProf {
-  display: flex;
+  display: none;
   flex-flow: column nowrap;
 }
 .site_main_prof_page h3 {
@@ -1018,7 +1045,6 @@ textarea {
 }
 .site_main_prof_page .contenuProf .containerProf {
   position: relative;
-  width: 100%;
 }
 .site_main_prof_page .contenuProf .containerProf .elmsProf {
   position: absolute;
@@ -1027,6 +1053,11 @@ textarea {
   z-index: 1;
   top: 0;
   width: 100%;
+}
+.site_main_prof_page .contenuProf .containerProf .elmsProf p {
+  line-height: 2rem;
+  text-align: justify;
+  margin: 25px;
 }
 .site_main_prof_page .contenuComplet {
   display: flex;
@@ -1124,26 +1155,65 @@ textarea {
     align-items: center;
     background-color: rgba(48, 48, 48, 0.75);
     border-radius: 0% 13px 13px 13px;
-    width: 100%;
   }
   .contenuComplet .contenuProf img {
     position: relative;
     left: 0;
     height: auto;
-    width: 40%;
+    width: 30%;
     border-radius: 0% 13px 13px 13px;
     margin: 10px;
     align-self: flex-start;
   }
+  .contenuComplet .contenuProf .elmsProf {
+    display: flex;
+  }
+  .contenuComplet .contenuProf .elmsProf p {
+    margin: 25px 25px 25px 10px;
+  }
   .contenuComplet .contenuProf .containerProf {
     display: flex;
     flex-direction: row;
+  }
+  .contenuComplet .contenuProf .containerProf > .elmsProf {
+    width: 67%;
+    right: 0;
   }
   .contenuComplet .contenuComplet > p {
     display: flex;
     flex-flow: column nowrap;
   }
 }
+.textePull {
+  width: 100%;
+  height: auto;
+  background-color: red;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+  transform: translateY(0vw);
+}
+.textePull .pullEl {
+  text-align: center;
+  border-bottom: 1px solid black;
+  z-index: 3;
+  margin: 0;
+  padding: 16px;
+}
+
+.pullUp {
+  transform: translateY(-60vw);
+}
+
+.elmsProfMobile {
+  display: none;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 600px) and (max-width: 720px) {
   .site_main_prof_page h3 {
     margin: 100px 0 3px 0;
@@ -1152,6 +1222,9 @@ textarea {
 @media only screen and (min-width: 720px) and (max-width: 820px) {
   .site_main_prof_page h3 {
     margin: 50px 0 3px 0;
+  }
+  .site_main_prof_page .textePull {
+    display: none;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 820px) {
@@ -1162,8 +1235,14 @@ textarea {
     letter-spacing: 10px;
     font-size: 1.2rem;
   }
+  .textePull {
+    display: none;
+  }
 }
 @media only screen and (min-width: 820px) and (max-width: 1920px) {
+  .site_main_prof_page .textePull {
+    display: none;
+  }
   .site_main_prof_page .left-right {
     width: 10%;
   }
@@ -1182,8 +1261,15 @@ textarea {
   .site_main_prof_page #right {
     margin-bottom: 55px;
   }
+  .site_main_prof_page .contenuProf .containerProf .elmsProf p {
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+  }
 }
 @media only screen and (min-width: 1920px) {
+  .site_main_prof_page .textePull {
+    display: none;
+  }
   .site_main_prof_page .left-right {
     width: 10%;
   }
@@ -1201,6 +1287,10 @@ textarea {
   }
   .site_main_prof_page #right {
     margin-bottom: 75px;
+  }
+  .site_main_prof_page .contenuProf .containerProf .elmsProf p {
+    line-height: 2.8rem;
+    font-size: 1.3rem;
   }
 }
 .site_main_proj_page {
