@@ -316,8 +316,8 @@
         margin: 0;
         padding: 10px;
         
-        i {
-            transform: scaleX(1.5);
+        svg {
+            filter: invert(100%) brightness(100%) contrast(100%)
         }
     }
 }
