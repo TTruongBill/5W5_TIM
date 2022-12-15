@@ -1,13 +1,16 @@
 .site_main_proj_page{
     .left-right img{
         object-fit: cover;
-        width: 120px;
+        width: 91px;
         height: 150px;
     }
 
     .contenuComplet .contenuProf img{
         object-fit: cover;
         height: 50vh;
+    }
+    .textePull{
+        transform: translateY(109vw);
     }
 }
 .site_main_prof_page, .site_main_proj_page {
