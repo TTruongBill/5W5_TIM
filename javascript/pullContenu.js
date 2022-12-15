@@ -12,22 +12,25 @@ pullEl.addEventListener('touchstart', function(e){
     var touchobj = e.changedTouches[0]
     dist = 0
     startY = touchobj.pageY
-    startTime = new Date().getTime()
+    //startTime = new Date().getTime()
+    document.body.style.overflowY = "hidden";
     e.preventDefault()
 }, false)
 
 pullEl.addEventListener('touchmove', function(e){
+    document.body.style.overflowY = "hidden";
     e.preventDefault() 
 }, false)
 
 pullEl.addEventListener('touchend', function(e){
     var touchobj = e.changedTouches[0]
     dist = touchobj.pageY - startY; 
-    elapsedTime = new Date().getTime() - startTime 
-    if(elapsedTime <= allowedTime && dist <= -threshold){
+    //elapsedTime = new Date().getTime() - startTime 
+    if(/*elapsedTime <= allowedTime && */dist <= -threshold){
         pullElement[0].classList.add("pullUp");
-    } else if(elapsedTime <= allowedTime && dist >= threshold){
+    } else if(/*elapsedTime <= allowedTime && */dist >= threshold){
         pullElement[0].classList.remove("pullUp");
     }
+    document.body.style.overflowY = "scroll";
     e.preventDefault()
 }, false)
