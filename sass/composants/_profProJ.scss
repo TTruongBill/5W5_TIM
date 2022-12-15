@@ -101,13 +101,18 @@
         .containerProf{
             position: relative;
 
-            .elmsProf{
+            .elmsProf {
                 position: absolute;
                 height: 100%;
                 overflow-y: scroll;
                 z-index: 1;
                 top: 0;
                 width: 100%;
+
+                .wp-block-embed__wrapper{
+                    margin: 0 25px;
+                }
+
                 p {
                     line-height: 2rem;
                     text-align: justify;
@@ -270,10 +275,11 @@
     }
     
 }
+
 .textePull{
     width: 100%;
     height: auto;
-    background-color: red;
+    background-color: rgba(48, 48, 48, 0.85);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -297,9 +303,15 @@
     transform: translateY(-60vw);
 }
 
-.elmsProfMobile{
+.elmsProfMobile {
     display: none;
     flex-direction: column;
+    margin: 5px 25px;
+
+    p {
+        line-height: 2rem;
+        text-align: justify;
+    }
 }
 
 
@@ -309,6 +321,11 @@
 
         h3 {
             margin: 100px 0 3px 0;
+        }
+
+        .contenuProf .containerProf .elmsProf p {
+            font-size: 0.8rem;
+            line-height: 1.7rem;
         }
     }
 }
@@ -321,6 +338,11 @@
         }  
         .textePull{
             display: none;
+        }
+
+        .contenuProf .containerProf .elmsProf p {
+            font-size: 0.8rem;
+            line-height: 1.7rem;
         }
     }
 }
@@ -341,6 +363,27 @@
     }
     .textePull{
         display: none;
+    }
+}
+
+//////////////////////////////////////////// GRAND ÉCRAN ////////////////////////////////////////////
+@media only screen and (min-width: 820px) and (max-width: 1000px) {
+    .site_main_prof_page, .site_main_proj_page {
+
+        .contenuProf .containerProf .elmsProf p {
+            font-size: 1rem;
+            line-height: 2rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1920px) {
+    .site_main_prof_page, .site_main_proj_page {
+
+        .contenuProf .containerProf .elmsProf p {
+                line-height: 2.5rem;
+                font-size: 1.2rem;
+            }
     }
 }
 
@@ -374,15 +417,6 @@
 
         #right {
             margin-bottom: 55px;
-        }
-
-        .contenuProf {
-            .containerProf {
-                .elmsProf p {
-                    line-height: 2.5rem;
-                    font-size: 1.2rem;
-                }
-            }
         }
     }
 }
