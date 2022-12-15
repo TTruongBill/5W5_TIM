@@ -278,7 +278,7 @@
 
 .textePull{
     width: 100%;
-    height: auto;
+    height: 76vh;
     background-color: rgba(48, 48, 48, 0.85);
     position: fixed;
     bottom: 0;
@@ -287,7 +287,7 @@
     display: flex;
     flex-direction: column;
     transition: all 0.5s;
-    transform: translateY(0vw);
+    transform: translateY(151vw);
 
     #pullEl{
         text-align: center;
@@ -296,17 +296,21 @@
         margin: 0;
         padding: 16px;
         
+        i {
+            transform: scaleX(1.5);
+        }
     }
 }
 
 .pullUp{
-    transform: translateY(-60vw);
+    transform: translateY(0vw);
 }
 
 .elmsProfMobile {
     display: none;
     flex-direction: column;
-    margin: 5px 25px;
+    padding: 5px 25px;
+    overflow-y: scroll;
 
     p {
         line-height: 2rem;
