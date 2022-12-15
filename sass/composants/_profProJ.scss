@@ -9,7 +9,6 @@
         object-fit: cover;
         height: 50vh;
     }
-
     .textePull{
         transform: translateY(109vw);
     }
@@ -68,7 +67,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 50px;
     }
 
     #listeProfs {
@@ -303,7 +301,9 @@
     display: flex;
     flex-direction: column;
     transition: all 0.5s;
-    transform: translateY(151vw);
+    transform: translateY(133.2vw);
+        
+
 
     #pullEl{
         text-align: center;
