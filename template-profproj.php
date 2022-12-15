@@ -99,7 +99,7 @@
                 </svg>
             </div>
             <div class="textePull">
-                <p id="pullEl">^</p>
+                <p id="pullEl"><i class="fa-solid fa-grip-lines"></i></p>
                 <?php foreach ($catPost as $post) : setup_postdata($post);?>
                 <div class="elmsProfMobile">
                         <?php the_content();?>
