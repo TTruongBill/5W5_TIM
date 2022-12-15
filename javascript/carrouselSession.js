@@ -107,7 +107,9 @@ function ouvrirCoursButton(){
     
     for(let i = 0; i <ouvrirCours.length; i++){
         ouvrirCours[i].addEventListener("mousedown", () => {
-            location.href='#sessions';
+            if (window.innerWidth >= 600) {
+                location.href='#sessions';
+            }
             for(let j = 0; j < ouvrirCours.length; j++){
                 fermerCoursAuto(coursSession[j], fermerCours[j], ouvrirCours[j], content_trim[j], content_total[j]);
             }
@@ -116,7 +118,7 @@ function ouvrirCoursButton(){
             fermerCours[i].style.display = "flex";
             ouvrirCours[i].style.display = "none";
             content_trim[i].style.display = "none";
-            content_total[i].style.display = "flex";
+            content_total[i].style.display = "block";
             chiffreCours = i;
             coursSession[i].setAttribute("data-order", 1);
             
