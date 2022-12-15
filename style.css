@@ -85,8 +85,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -428,8 +427,9 @@ textarea {
   height: 100%;
 }
 .site_main_front_page .wp-block-video video {
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200%;
+  object-fit: cover;
 }
 
 .site_header {
@@ -1057,6 +1057,14 @@ textarea {
   text-align: justify;
   margin: 25px;
 }
+.site_main_prof_page .contenuProf .containerProf .elmsProf .wp-block-image, .site_main_proj_page .contenuProf .containerProf .elmsProf .wp-block-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.site_main_prof_page .contenuProf .containerProf .elmsProf .wp-block-image img, .site_main_proj_page .contenuProf .containerProf .elmsProf .wp-block-image img {
+  width: 75%;
+}
 .site_main_prof_page .contenuComplet, .site_main_proj_page .contenuComplet {
   display: flex;
   flex-direction: column;
@@ -1084,6 +1092,11 @@ textarea {
 }
 
 @media only screen and (min-width: 600px) {
+  .site_main_proj_page img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
   .site_main_prof_page, .site_main_proj_page {
     flex-direction: row;
     justify-content: start;
@@ -1106,7 +1119,7 @@ textarea {
     width: 100%;
   }
   .site_main_prof_page .contenuProf, .site_main_proj_page .contenuProf {
-    width: auto;
+    width: 100%;
     height: 90%;
   }
   .site_main_prof_page .contenuProf img, .site_main_proj_page .contenuProf img {
@@ -1172,6 +1185,7 @@ textarea {
   .contenuComplet .contenuProf .containerProf {
     display: flex;
     flex-direction: row;
+    width: 100%;
   }
   .contenuComplet .contenuProf .containerProf > .elmsProf {
     width: 67%;
@@ -1345,13 +1359,11 @@ textarea {
   opacity: 0%;
 }
 .site_main_cours_page .widthCoursOuvert {
-  -webkit-animation: animCoursOuvert 3s forwards;
-          animation: animCoursOuvert 3s forwards;
+  animation: animCoursOuvert 3s forwards;
   transition-timing-function: cubic-bezier(0.78, 0, 0.25, 1.48);
 }
 .site_main_cours_page .animCarrouselCours {
-  -webkit-animation-name: animCarrouselCours();
-          animation-name: animCarrouselCours();
+  animation-name: animCarrouselCours();
 }
 
 h1 {
@@ -1405,14 +1417,6 @@ button:hover:enabled {
     left: 0;
   }
 }
-@-webkit-keyframes animCarrouselCours {
-  from {
-    scale: 1;
-  }
-  to {
-    scale: 1;
-  }
-}
 @keyframes animCarrouselCours {
   from {
     scale: 1;
@@ -1422,20 +1426,6 @@ button:hover:enabled {
   }
 }
 @media only screen and (min-width: 600px) {
-  @-webkit-keyframes animCoursOuvert {
-    15% {
-      opacity: 0;
-      visibility: hidden;
-      width: 93%;
-    }
-    100% {
-      opacity: 100%;
-      visibility: visible;
-      order: 0;
-      width: 93%;
-      order: -1;
-    }
-  }
   @keyframes animCoursOuvert {
     15% {
       opacity: 0;

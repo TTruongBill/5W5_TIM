@@ -113,6 +113,18 @@
                     text-align: justify;
                     margin: 25px;
                 }
+
+                .wp-block-image {
+                    display: flex;
+
+                    align-items: center;
+                    justify-content: center;
+
+
+                    img {
+                        width:75%;
+                    }
+                }
             }
         }
     }
@@ -150,6 +162,14 @@
 }
 @media only screen and (min-width: 600px) {
     
+    .site_main_proj_page {
+        img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+    }
+
     .site_main_prof_page, .site_main_proj_page {
 
         flex-direction: row;
@@ -163,6 +183,8 @@
             background-color: rgba(0, 0, 0, 0.5);
             margin: 0 40px 0 0;
 
+            
+
             button:nth-of-type(1) {
                 transform: rotateZ(90deg);
             }
@@ -173,6 +195,7 @@
             
             img {
                 width: 100%;
+                
             }
         }
 
