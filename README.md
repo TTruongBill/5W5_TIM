@@ -1,52 +1,27 @@
-# 5W5 TIM
-But : Faire un site avec Wordpress qui a pour but de mettre en valeur la techniques en intégration multimédia.
+# Refonte du site web du TIM 
 
-**
-Impossible de retourner sur la page d'accueil en ce moment, le text tim sera remplacer par un logo qui mènera vers la page d'accueil.
-**
+## Description
+Ce projet de site web éducatif a été réalisé avec les technologies suivantes : HTML, SASS, PHP, Wordpress et JavaScript. L'objectif principal de ce site était de permettre à l'équipe de développer des compétences en travail d'équipe et en communication avec les clients, tout en mettant en pratique les connaissances acquises pour créer et intégrer un site web en utilisant WordPress.
 
-# Pages
-En cours:
-- accueil
-- cours
-- enseignants
+En tant que programmeur principal, j'ai pris en charge la création du template général du site ainsi que le développement de toutes ses fonctionnalités. Cela inclut l'affichage des sessions, des cours et des contenus, ainsi que la mise en place de la barre de navigation en format mobile avec une animation de glissement. J'ai également assuré la gestion de l'affichage des projets et des professeurs. De plus, j'ai été responsable de la conception et de l'intégration des bulles dans le background.
 
-à finir :
-- projets
-- vie étudiante
+## Fonctionnalités
+- Affichage des sessions, des cours et des contenus.
+- Affichage des contenus avec un carousel.
+- Affichage des contenus du contenu choici avec un slider en mobile.
+- Gestion de l'affichage des projets et des professeurs.
+- Conception et intégration des bulles dans le background.
 
-à ajouter:
-- avenir
-- inscription
+## Technologies Utilisées
+- HTML
+- SASS
+- PHP
+- Wordpress
+- JavaScript
 
-# CSS
-- base de format mobile en cours (prioritaire)
-- base de format desktop en cours
-- adaptation de mobile à desktop en cours
+  
+## Déploiement
+L'application est déployée en utilisant l'hébergement Firebase. Accédez à la version en direct [ici](https://timm176.sg-host.com/).
 
-en format mobile:
-- nav terminé
-- composante de cours terminé
-- base de composante pour les profs terminé
-
-# JS
-en format mobile :
-- les animations du menu burger terminé
-- le carrousel de la page cours terminé
-- le carousel de la page enseignants terminé (informations des profs et le numéro du prof auquel on est rendu)
-- la nav de la page actif sera une couleur différente terminé
-
-en format desktop:
-- le carrousel de la page de cours terminé
-- le carrousel de la page enseignants terminé
-
-à faire:
-- le carrousel de la page enseignants (images)
-- le carrousel de la page vie étudiante
-
-# Product Backlog
-lien google-sheet:https://docs.google.com/spreadsheets/d/1S9ZxRREMPuLLbzwBsvkTdu9Du900yJM3RaKV92jllL8/edit#gid=1447645501
-# Siteground
-lien siteGround: https://timm176.sg-host.com/
-# Backlog
-Lien github projects : https://github.com/users/k1polo/projects/3
+## Licence
+Ce projet est sous licence MIT License.
